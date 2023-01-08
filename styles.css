@@ -1,0 +1,193 @@
+* {
+    outline:1px solid red;
+}
+
+main {
+    max-width: 1200px;
+    margin:auto;
+}
+
+.col-lg-100 {
+    width:100%; 
+}
+
+.col-lg-50 {
+    width:50%;
+}
+.col-lg-60 {
+    width:60%;
+}
+
+.col-lg-40 {
+    width:40%;
+}
+
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 20px;
+}
+
+.awo-promotion-wrapper {
+    width:50%;
+    display:flex;
+    overflow:auto;
+    gap:20px;
+  }
+  
+.awo-promotion-card {
+    min-width:250px;
+  }
+
+
+
+.awo-promo-card {
+    width:450px;
+    border-radius: 6px;
+}
+
+.awo-promotion-card:nth-of-type(1){
+    margin-left: 20px;
+}
+
+.awo-brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:5px;
+}
+
+
+.awo-brands-button {
+    width:150px;
+}
+
+.awo-postcode-search > label{
+    display: block;
+}
+
+.awo-home-cat-container {
+    display: flex;
+    width: 100%;
+    gap:20px;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+
+.awo-home-cat-button {
+    min-width:120px;
+    min-height: 120px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+@media (max-width:1000px){
+    .col-sm-100 {
+        width:100%;
+    }
+    .awo-brands-grid {
+        display: flex;
+        overflow:auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap:20px;
+        overflow:auto;
+    }
+    .awo-promotion-wrapper {
+        width:100%;
+    }
+}
+
+
+/* Slider styles */
+
+.awo-slider-button {
+    border:1px solid #ededed;
+    padding:8px 16px;
+    border-radius:50px;
+    height:40px;
+    width:40px;
+    position:absolute;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#next {
+    left:100%;
+    transform: translate(-50%, -50%);
+}
+
+#prev {
+    left:0px;
+    transform: translate(-50%, -50%);
+
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+.slider-wrapper{
+    border:1px solid green;
+    padding:20px;
+    max-width: 100%;
+}
+
+.awo-reviews-track {
+    position: relative;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+  
+.awo-reviews-slider {
+    width:300px;
+    height:300px;
+    margin:auto;
+    position: relative;
+    max-width: 100%;
+    background:#f5f5f5;
+    border-radius:10px;
+    border:1px solid transparent;
+}
+
+@media (max-width:500px){
+    .awo-reviews-slider {
+        margin:auto;
+ }
+}
+
+  .current {
+    display: block;
+  }
+
+  .awo-review-slide {
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateX(100%)
+  }
+
+  .awo-review-slide:nth-of-type(even){
+      background: rgb(10, 99, 64);
+      color:white;
+  }
+  
+  .awo-review-slide.current {
+    opacity: 1;
+    transform: translateX(0);
+  }
