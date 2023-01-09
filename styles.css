@@ -46,8 +46,9 @@ section {
 }
 
 .awo-hero-header h1 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 40px;
+    line-height: 38px;
     margin-top: 10px;
 }
 
@@ -180,12 +181,12 @@ section {
         width:100%;
     }
     .awo-hero-cat-button {
-        min-width:85px;
-        min-height:85px;
-        font-size: 12px;
+        min-width:130px;
+        min-height:130px;
+        font-size: 14px;
     }
     .awo-hero-cat-button img {
-        width:100px;
+        width:120px;
     }
 }
 
