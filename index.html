@@ -1,87 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWO home page - Jan 2023</title>
-    <link href="/styles.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <main>
-        <section>
-            <div class="col-lg-100 col-sm-100">
-                <h1 class="awo-h1">
-                    Find your appliance
-                </h1>
-                <p>Every discount is on top of our price match service and free delivery so you know you’re getting a great deal every time.</p>
-                <div class="col-lg-100 awo-home-cat-container">
-                  <div class="awo-home-cat-button">Dishwashers</div>
-                  <div class="awo-home-cat-button">Fridges &amp; freezers</div>
-                  <div class="awo-home-cat-button">Washers</div>
-                  <div class="awo-home-cat-button">Dryers</div>
-                  <div class="awo-home-cat-button">Dryers</div>
-                  <div class="awo-home-cat-button">Dryers</div>
-                  <div class="awo-home-cat-button">Dryers</div>
-                  <div class="awo-home-cat-button">Dryers</div>
-                </div>
-            </div>
-     </div>
- </section>
-        <section>
 
-           <div class="col-lg-50 col-sm-100">
-               <h2 class="awo-h2">
-                   Promotions and discount codes
-               </h2>
-               <p>Every discount is on top of our price match service and free delivery so you know you’re getting a great deal every time.</p>
-               <button>View all promotions</button>
-           </div>
-           <div class="awo-promotion-wrapper">
-            <div class="awo-promotion-card">
-              <p>some content
-            </div>
-            <div class="awo-promotion-card">
-              <p>some content
-            </div>
-            <div class="awo-promotion-card">
-              <p>some content
-            </div>
-            <div class="awo-promotion-card">
-              <p>some content
-            </div>
-          </div>   
-    </div>
-</section>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWO home page - Jan 2023</title>
+  <link href="/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main>
     <section>
-        <div class="awo-delivery col-lg-50 col-sm-100">
-            <h2>Shop on-line, in-store, or over the phone</h2>
-            <p>We’re a Manchester based, family owned business, that offers free delivery to most post-codes in the UK. Connect to real people and get expert advice quickly by calling ... ,opening a live chat or visiting one of our two showrooms based in Swinton and Urmston.</p>
+      <div class="col-lg-100 col-sm-100">
+        <h1 class="awo-h1">
+          Find your appliance
+        </h1>
+        <p>Every discount is on top of our price match service and free delivery so you know you’re getting a great deal every time.</p>
+        <div class="col-lg-100 awo-home-cat-container">
+          <div class="awo-hero-cat-button" data-modal="Dishwashers">Dishwashers</div>
+          <div class="awo-hero-cat-button" data-modal="Fridge-freezers">Fridges &amp; freezers</div>
+          <div class="awo-hero-cat-button" data-modal="Dryers">Dryers</div>
+          <div class="awo-hero-cat-button">Dryers</div>
+          <div class="awo-hero-cat-button">Dryers</div>
+          <div class="awo-hero-cat-button">Dryers</div>
+          <div class="awo-hero-cat-button">Dryers</div>
+          <div class="awo-hero-cat-button">Dryers</div>
+        </div>
+        <div class="awo-hero-modal" id="Dishwashers">
+          <div class="modal-content">
+            <ul>
+              <li>Here are some dishwasher links</li>
+              <li>Here are some dishwasher links</li>
+              <li>Here are some dishwasher links</li>
+              <li>Here are some dishwasher links</li>
+              <li>Here are some dishwasher links</li>
+            </ul><button class="close-modal">Close</button>
+          </div>
+        </div>
+        <div class="awo-hero-modal" id="Fridge-freezers">
+          <div class="modal-content">
+              <h3>Fridges and freezers</h3>
+            <ul>
+              <li>Here are some dishwasher links</li>
+              <li>Here are some dishwasher links</li>
+              <li>Here are some dishwasher links</li>
+              <li>Here are some dishwasher links</li>
+              <li>Here are some dishwasher links</li>
+            </ul><button class="close-modal">Close</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section>
+
+      <div class="col-lg-50 col-sm-100">
+        <h2 class="awo-h2">
+          Promotions and discount codes
+        </h2>
+        <p>Every discount is on top of our price match service and free delivery so you know you’re getting a great deal every time.</p>
+        <button>View all promotions</button>
+      </div>
+      <div class="awo-promotion-wrapper">
+        <div class="awo-promotion-card">
+          <p>some content
+        </div>
+        <div class="awo-promotion-card">
+          <p>some content
+        </div>
+        <div class="awo-promotion-card">
+          <p>some content
+        </div>
+        <div class="awo-promotion-card">
+          <p>some content
+        </div>
+      </div>
+      </div>
+    </section>
+    <section>
+      <div class="awo-delivery col-lg-50 col-sm-100">
+        <h2>Shop on-line, in-store, or over the phone</h2>
+        <p>We’re a Manchester based, family owned business, that offers free delivery to most post-codes in the UK. Connect to real people and get expert advice quickly by calling ... ,opening a live chat or visiting one of our two showrooms based in Swinton and Urmston.</p>
         <div class="awo-postcode-search">
-            <label>Search for your delivery dates</label>
-            <input text="text" id="awo-postcode-input"> <button>Search</button>
+          <label>Search for your delivery dates</label>
+          <input text="text" id="awo-postcode-input"> <button>Search</button>
         </div>
-        </div>
-        <div class="awo-brands-grid col-lg-50 col-sm-100">
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-            <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
-        </div>
+      </div>
+      <div class="awo-brands-grid col-lg-50 col-sm-100">
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+        <button class="awo-brands-button"><img src="https://via.placeholder.com/100x50" alt="Bosch"></button>
+      </div>
     </section>
     <section>
-        <div class="awo-delivery col-lg-50 col-sm-100">
-            <p>Trustpilot</p>
-            <h2>Shop on-line, in-store, or over the phone</h2>
-            <p>We’re the highest reviewed Appliance store verified by Trustpilot. Customers quote our friendly staff, low prices and courteous delivery service as reasons we deserve 5 stars.</p>
-        </div>
+      <div class="awo-delivery col-lg-50 col-sm-100">
+        <p>Trustpilot</p>
+        <h2>Shop on-line, in-store, or over the phone</h2>
+        <p>We’re the highest reviewed Appliance store verified by Trustpilot. Customers quote our friendly staff, low prices and courteous delivery service as reasons we deserve 5 stars.</p>
+      </div>
     </section>
-</main>
-<script src="/utils.js" type="text/javascript"></script>
+  </main>
+  <script src="/utils.js" type="text/javascript"></script>
 </body>
+
 </html>

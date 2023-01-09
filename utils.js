@@ -1,3 +1,35 @@
+// Modal
+const allCatButons = document.querySelectorAll(".awo-hero-cat-button");
+const allModals = document.querySelectorAll('.awo-hero-modal');
+const closeAwoModals = document.querySelectorAll('.close-modal')
+let showModal;
+
+
+allCatButons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+      const activeModal = event.target.dataset.modal;
+      console.log(activeModal)
+      showModal = document.getElementById(activeModal);
+      console.log(showModal)
+      showModal.classList.add('show-modal');
+
+  })
+})
+
+
+
+closeAwoModals.forEach((button) => {
+      button.addEventListener('click', () => {
+        console.log('buttn')
+        allModals.forEach((modal) => {
+          modal.classList.remove('show-modal')
+        })
+      })
+})
+
+
+
+// Slider
 const allSlides = document.querySelectorAll(".awo-review-slide");
 
 let currentSlide = 0;
