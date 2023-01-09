@@ -37,7 +37,6 @@ let maxValue = allSlides.length;
 
 const next = document.querySelector("#next");
 const prev = document.querySelector("#prev");
-const addSlide = document.querySelector("#add-slide");
 
 if (currentSlide == 0){
     prev.style.display = "none";

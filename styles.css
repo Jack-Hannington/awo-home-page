@@ -156,13 +156,23 @@ section {
     transform: translate(-50%, -50%);
 }
 
+.awo-slider-toggle {
+    padding: 8px 16px;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+}
+
 #next {
     left:100%;
+    top:50%;
     transform: translate(-50%, -50%);
 }
 
 #prev {
     left:0px;
+    top:50%;
     transform: translate(-50%, -50%);
 
 }
