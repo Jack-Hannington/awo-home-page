@@ -5,6 +5,7 @@
 main {
     max-width: 1200px;
     margin:auto;
+    font-family: Inter;
 }
 
 .col-lg-100 {
@@ -37,6 +38,13 @@ section {
 
 .awo-hero-header {
     text-align: center;
+    color:white;
+}
+
+.awo-hero-header h1 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 10px;
 }
 
 .awo-hero-modal {
