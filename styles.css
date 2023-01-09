@@ -195,8 +195,8 @@ button:hover {
 }
   
 .awo-reviews-slider {
-    width:300px;
-    height:300px;
+    width:100%;
+    height:200px;
     margin:auto;
     position: relative;
     max-width: 100%;
@@ -225,7 +225,7 @@ button:hover {
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
-    transform: translateX(100%)
+    /* transform: translateX(100%) */
   }
 
   .awo-review-slide:nth-of-type(even){
@@ -235,5 +235,5 @@ button:hover {
   
   .awo-review-slide.current {
     opacity: 1;
-    transform: translateX(0);
+    /* transform: translateX(0); */
   }
