@@ -110,16 +110,28 @@ section {
     gap:20px;
     overflow: auto;
     flex-wrap: nowrap;
+    padding:20px 0px 10px 0px;
 }
 
 .awo-hero-cat-button {
-    min-width:120px;
-    min-height: 120px;
+    min-width:100px;
+    min-height: 100px;
+    font-size: 14px;
+    text-align: center;
     border-radius:50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex-direction:column; 
+    position: relative;
+}
+
+.awo-hero-cat-button img {
+    margin-top:-30px;
+    width:100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 
