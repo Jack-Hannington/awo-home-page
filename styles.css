@@ -1,6 +1,6 @@
-* {
+/* * {
     outline:1px solid red;
-}
+} */
 
 main {
     max-width: 1200px;
@@ -31,6 +31,10 @@ section {
     padding: 80px 20px;
 }
 
+.awo-hero > section {
+    padding:40px 20px;
+}
+
 .awo-hero {
     background: linear-gradient(178.43deg, #094FA4 2.78%, 
     rgba(9, 79, 164, 0) 94.26%);
@@ -43,7 +47,7 @@ section {
 
 .awo-hero-header h1 {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 40px;
     margin-top: 10px;
 }
 
@@ -132,8 +136,8 @@ section {
 }
 
 .awo-hero-cat-button {
-    min-width:10px;
-    min-height: 100px;
+    min-width:120px;
+    min-height: 120px;
     font-size: 14px;
     text-align: center;
     border-radius:50%;
@@ -146,9 +150,13 @@ section {
     color:white;
 }
 
+.awo-hero-cat-button:hover {
+    cursor: pointer;
+}
+
 .awo-hero-cat-button img {
     margin-top:-30px;
-    width:100px;
+    width:120px;
     aspect-ratio: 3/2;
     max-width: 100%;
     object-fit: contain;
@@ -175,6 +183,9 @@ section {
         min-width:85px;
         min-height:85px;
         font-size: 12px;
+    }
+    .awo-hero-cat-button img {
+        width:100px;
     }
 }
 
