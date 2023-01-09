@@ -30,6 +30,15 @@ section {
     padding: 80px 20px;
 }
 
+.awo-hero {
+    background: linear-gradient(178.43deg, #094FA4 2.78%, 
+    rgba(9, 79, 164, 0) 94.26%);
+}
+
+.awo-hero-header {
+    text-align: center;
+}
+
 .awo-hero-modal {
     display: none;
 }
@@ -110,6 +119,7 @@ section {
     gap:20px;
     overflow: auto;
     flex-wrap: nowrap;
+    justify-content: space-between;
     padding:20px 0px 10px 0px;
 }
 
@@ -128,8 +138,9 @@ section {
 
 .awo-hero-cat-button img {
     margin-top:-30px;
-    width:100%;
+    width:100px;
     aspect-ratio: 3/2;
+    max-width: 100%;
     object-fit: contain;
     margin-bottom: 10px;
 }
