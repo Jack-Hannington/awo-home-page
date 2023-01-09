@@ -2,17 +2,26 @@
 const allCatButons = document.querySelectorAll(".awo-hero-cat-button");
 const allModals = document.querySelectorAll('.awo-hero-modal');
 const closeAwoModals = document.querySelectorAll('.close-modal')
-let showModal;
+let showModal
+let modalStatus;
+let activeModal;
 
+// document.addEventListener('click', (event) => {
+//   console.log('clicked')
+//     const target = event.target;
+//     if (!showModal.contains(target)) {
+//       showModal.style.display = 'none';
+//     }
+// })
 
 allCatButons.forEach((button) => {
   button.addEventListener('click', (event) => {
-      const activeModal = event.target.dataset.modal;
+      activeModal = event.target.dataset.modal;
       console.log(activeModal)
       showModal = document.getElementById(activeModal);
       console.log(showModal)
       showModal.classList.add('show-modal');
-
+      modalStatus = "active";
   })
 })
 
