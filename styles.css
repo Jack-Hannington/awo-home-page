@@ -76,8 +76,9 @@ section:nth-of-type(3){
 }
 
 .awo-h2 {
-    font-size: 30px;
-    color:#0D2E56;
+    font-size: 30px!important;
+    color:#0D2E56!important;
+    text-align: left!important;
     font-weight: 500;
     margin-top: 10px;
     line-height: 28px;
@@ -305,7 +306,7 @@ section:nth-of-type(3){
     border-radius: 4px;
     border:1px solid transparent;
     background-color:#0D2E56;
-    color:#f5f5f5;
+    color:#f5f5f5!important;
     font-family: Inherit;
     padding:12px 22px;
     text-decoration: none;
@@ -356,7 +357,7 @@ section:nth-of-type(3){
         margin-top:40px;
     }
     .awo-hero > section {
-        padding:80px 40px;
+        padding:30px 20px;
     }
     .awo-home-section {
         padding:80px 20px;
