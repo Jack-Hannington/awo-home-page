@@ -56,6 +56,8 @@ section:nth-of-type(3){
     background: linear-gradient(178.21deg, #094FA4 2.95%, rgba(9, 79, 164, 0) 110.51%);
     border-radius: 6px;
     position: relative;
+    max-width: 1280px;
+    margin: auto;
 }
 
 
@@ -142,13 +144,14 @@ section:nth-of-type(3){
     display:flex;
     overflow:auto;
     gap:20px;
+    justify-content: flex-end;
   }
   
 .awo-promotion-card {
-    min-width:150px;
+    min-width:180px;
   }
 .awo-promotion-card img {
-    width:150px;
+    width:180px;
 }
 
 
@@ -309,6 +312,7 @@ section:nth-of-type(3){
     }
     .awo-promotion-wrapper {
         width:100%;
+        justify-content: flex-start;
     }
     .awo-hero-cat-button {
         min-width:130px;
