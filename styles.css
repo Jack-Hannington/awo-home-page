@@ -49,7 +49,7 @@ section:nth-of-type(3){
 }
 
 .awo-hero > section {
-    padding:40px 20px;
+    padding:60px 20px;
 }
 
 .awo-hero {
@@ -315,7 +315,10 @@ section:nth-of-type(3){
         margin-top: 30px;
     }
     .awo-brands-grid {
-        margin-top:20px;
+        margin-top:40px;
+    }
+    .awo-hero > section {
+        padding:30px 20px;
     }
 }
 
