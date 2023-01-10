@@ -25,6 +25,12 @@ closeAwoModals.forEach((button) => {
 
 
 
+// document.addEventListener('click', (event) => {
+//   if (!event.target.closest('.awo-hero-modal') && !event.target.classList.contains('close-modal') && showModal) {
+//     showModal.classList.remove('show-modal');
+//   }
+// });
+
 
 
 
