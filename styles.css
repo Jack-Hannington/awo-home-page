@@ -1,6 +1,7 @@
-/* * {
+* {
     outline:1px solid red;
-} */
+    box-sizing: border-box;
+}
 
 
 
@@ -46,9 +47,7 @@ section:nth-of-type(3){
     margin-top:300px; 
 }
 
-.awo-hero > section {
-    padding:60px 20px;
-}
+
 
 .awo-hero {
     background-color: rgb(225, 236, 251);
