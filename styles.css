@@ -99,6 +99,7 @@ section:nth-of-type(3){
     margin:auto;
     width:500px;
     max-width: 80%;
+    text-align: center;
 }
 
 .modal-content > ul {
@@ -114,6 +115,11 @@ section:nth-of-type(3){
     text-decoration: none;
     margin-bottom: 10px;
     transition: 0.5s;
+}
+
+.modal-content > ul > li > a {
+    text-decoration: none;
+    color:inherit;
 }
 
 .modal-content > ul > li:hover {
