@@ -47,11 +47,10 @@ let maxValue = allSlides.length;
 const next = document.querySelector("#next");
 const prev = document.querySelector("#prev");
 
+
 if (currentSlide == 0){
-    prev.style.display = "none";
+  prev.style.display = "none";
 }
-
-
 
 next.addEventListener("click", () => {
   if (currentSlide < maxValue - 1) {
@@ -67,14 +66,17 @@ next.addEventListener("click", () => {
 });
 
 prev.addEventListener("click", () => {
-  if (currentSlide > 0) {
+  if (currentSlide >= 0) {
     allSlides[currentSlide].classList.remove("current");
     currentSlide--;
     console.log(currentSlide);
     allSlides[currentSlide].classList.add('current');
   }
   if (currentSlide == 0){
-    // prev.style.display = "none";
+    prev.style.display = "none";
+}
+
+  if (currentSlide < maxValue){
     next.style.display = "block";
 }
 });
