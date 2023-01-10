@@ -219,6 +219,17 @@ section:nth-of-type(3){
     align-items: center;
     width:100px;
     height: 50px;
+    border:1px solid transparent;
+    transition: 0.5s;
+}
+
+.awo-brand:hover  {
+    border: 1px solid #0C57B1;
+    background:#f5f5f5;
+}
+
+.awo-promotion-card:hover {
+    opacity: 0.7;
 }
 
 .awo-brands-img {
@@ -343,6 +354,10 @@ section:nth-of-type(3){
     .slider-wrapper {
         margin:inherit;
     }
+    .awo-reviews-slider {
+        width: 100%;
+        margin:auto;
+    }
 }
 
 
@@ -350,25 +365,25 @@ section:nth-of-type(3){
 
 .awo-slider-toggle {
     border:1px solid #ededed;
-    padding:8px 16px;
     border-radius:50px;
-    height:40px;
-    width:40px;
+    height:30px;
+    width:30px;
     position:absolute;
-    background-color: white;
+    background-color: #0C57B1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    color: white;
 }
 
 #next {
-    left:93%;
+    left:100%;
     top:50%;
     transform: translate(-50%, -50%);
 }
 
 #prev {
-    left:7%;
+    left:0%;
     top:50%;
     transform: translate(-50%, -50%);
 
@@ -391,9 +406,9 @@ button:hover {
 }
   
 .awo-reviews-slider {
-    width:425px;
+    width:550px;
     max-width:100%;
-    height:260px;
+    height:360px;
     margin:auto;
     position: relative;
     max-width: 100%;
@@ -403,32 +418,42 @@ button:hover {
     background-color: #0C57B1;
 }
 
-@media (max-width:500px){
-    .awo-reviews-slider {
-        margin:auto;
- }
-}
-
   .current {
     display: block;
   }
 
   .awo-review-slide {
     height:100%;
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     opacity: 0;
-    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 1s, transform 1s;
     transform: translateX(100%);
     color:white;
+    text-align: center;
+    padding:0 40px;
+    /* transform: translateY(10%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .awo-review-slide h3 {
+      font-weight: 500;
+      color: #EAF3FF;
+  }
+
+  .awo-review-slide p:nth-of-type(2) {
+      color:#A9D0FF;
+  }
+
+  .awo-review-slide p {
+      margin:10px
   }
 
   
   .awo-review-slide.current {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
+    /* transform: translateY(10%); */
   }
