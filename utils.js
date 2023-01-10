@@ -51,6 +51,8 @@ if (currentSlide == 0){
     prev.style.display = "none";
 }
 
+
+
 next.addEventListener("click", () => {
   if (currentSlide < maxValue - 1) {
     allSlides[currentSlide].classList.remove("current");
@@ -59,9 +61,9 @@ next.addEventListener("click", () => {
     console.log(currentSlide);
     prev.style.display = "block";
   }
-  if (currentSlide == maxValue -1){
+  if (currentSlide + 1 == maxValue){
     next.style.display = "none";
-}
+  }
 });
 
 prev.addEventListener("click", () => {
@@ -72,7 +74,7 @@ prev.addEventListener("click", () => {
     allSlides[currentSlide].classList.add('current');
   }
   if (currentSlide == 0){
-    prev.style.display = "none";
+    // prev.style.display = "none";
     next.style.display = "block";
 }
 });

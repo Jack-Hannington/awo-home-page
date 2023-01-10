@@ -39,6 +39,11 @@ section {
     margin: auto;
 }
 
+section > div > p {
+    line-height: 24px;
+    margin-top: 5px;
+}
+
 section:nth-of-type(3){
     margin-top:300px; 
 }
@@ -49,23 +54,15 @@ section:nth-of-type(3){
 
 .awo-hero {
     background-color: rgb(225, 236, 251);
+    background: linear-gradient(178.43deg, #094FA4 2.78%, rgba(9, 79, 164, 0) 94.26%);
     position: relative;
 }
-
-.awo-hero-background {
-    position: absolute;
-    background-color: rgb(225, 236, 251);
-    width: 104%;
-    height: 100%;
-    left: -8px;
-    top: -8px;
-}
-
 
 
 .awo-hero-header {
     text-align: center;
-    color:#0D2E56;
+    color:#F0F3FD;
+;
 }
 
 .awo-hero-header h1 {
@@ -75,13 +72,20 @@ section:nth-of-type(3){
     margin-top: 10px;
 }
 
+.awo-h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .awo-hero-modal {
     display: none;
 }
 
 
 .modal-content {
-    background-color: #ededed;
+    background-color: #094FA4;
     border-radius: 6px;
     padding:20px;
     display: none;
@@ -120,7 +124,7 @@ section:nth-of-type(3){
   }
   
 .awo-promotion-card {
-    min-width:200px;
+    min-width:150px;
   }
 .awo-promotion-card img {
     width:150px;
@@ -133,12 +137,41 @@ section:nth-of-type(3){
     border-radius: 6px;
 }
 
+/* Delivery section */
+
+#delivery-section {
+    background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1673339159/AWO/AWO%20home%20page/UK_map_grey_ujkmqp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 40%;
+}
+
+
+.awo-postcode-search {
+    padding:10px 0px;
+}
+
+.awo-postcode-search > label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.awo-postcode-search > input {
+    font-family: inherit;
+    font-size: 16px;
+    padding:10.4px 10px;
+    border:1px solid lightgray;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
 
 .awo-brands-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap:5px;
+    justify-content: flex-end;
+    gap:10px;
 }
 
 
@@ -146,9 +179,21 @@ section:nth-of-type(3){
     width:150px;
 }
 
-.awo-postcode-search > label{
-    display: block;
+/* Trustpilot section */
+
+.awo-trustpilot {
+    background-color: #094FA4;
+    color: #fff;
+    border-radius: 6px;
+    margin-bottom: 50px;
 }
+
+.awo-trustpilot > div > .awo-home-button {
+    margin-bottom: 10px;
+}
+
+
+
 
 .awo-home-cat-container {
     display: flex;
@@ -163,7 +208,7 @@ section:nth-of-type(3){
 .awo-hero-cat-button {
     min-width:120px;
     min-height: 120px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     border-radius:50%;
     display: flex;
@@ -171,12 +216,9 @@ section:nth-of-type(3){
     align-items: center;
     flex-direction:column; 
     position: relative;
-    background-color: #094FA4;
-    background:#acc9ed;
-    color:#0D2E56;
-    /* color:white; */
+    background:#094FA4;
+    color:#CBEAFF;
     font-family: Inter;
-    text-transform: uppercase;
     font-weight: 500;
 }
 
@@ -191,6 +233,17 @@ section:nth-of-type(3){
     max-width: 100%;
     object-fit: contain;
     margin-bottom: 10px;
+}
+.awo-home-button {
+    border-radius: 4px;
+    border:1px solid transparent;
+    background-color:#0D2E56;
+    color:#f5f5f5;
+    font-family: Inherit;
+    padding:12px 22px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
 }
 
 
@@ -212,17 +265,20 @@ section:nth-of-type(3){
     .awo-hero-cat-button {
         min-width:130px;
         min-height:130px;
-        font-size: 12px;
+        font-size: 14px;
     }
     .awo-hero-cat-button img {
         width:120px;
+    }
+    .awo-promotion-wrapper {
+        margin-top: 30px;
     }
 }
 
 
 /* Slider styles */
 
-.awo-slider-button {
+.awo-slider-toggle {
     border:1px solid #ededed;
     padding:8px 16px;
     border-radius:50px;
@@ -233,14 +289,6 @@ section:nth-of-type(3){
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-
-.awo-slider-toggle {
-    padding: 8px 16px;
-    border-radius: 50px;
-    height: 40px;
-    width: 40px;
-    position: absolute;
 }
 
 #next {
@@ -261,7 +309,6 @@ button:hover {
 }
 
 .slider-wrapper{
-    border:1px solid green;
     padding:20px;
     max-width: 100%;
 }
@@ -274,14 +321,16 @@ button:hover {
 }
   
 .awo-reviews-slider {
-    width:100%;
-    height:200px;
+    width:425px;
+    max-width:100%;
+    height:220px;
     margin:auto;
     position: relative;
     max-width: 100%;
     background:#f5f5f5;
     border-radius:10px;
-    border:1px solid transparent;
+    border:none;
+    background-color: #0C57B1;
 }
 
 @media (max-width:500px){
@@ -304,13 +353,10 @@ button:hover {
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    color:white;
   }
 
-  .awo-review-slide:nth-of-type(even){
-      background: rgb(10, 99, 64);
-      color:white;
-  }
   
   .awo-review-slide.current {
     opacity: 1;
