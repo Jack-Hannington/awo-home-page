@@ -56,7 +56,7 @@ section:nth-of-type(3){
     background: linear-gradient(178.21deg, #094FA4 2.95%, rgba(9, 79, 164, 0) 110.51%);
     border-radius: 6px;
     position: relative;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -72,10 +72,12 @@ section:nth-of-type(3){
     font-size: 40px;
     line-height: 38px;
     margin-top: 10px;
+    color:#fff;
 }
 
 .awo-h2 {
     font-size: 30px;
+    color:#0D2E56;
     font-weight: 500;
     margin-top: 10px;
     line-height: 28px;
@@ -217,8 +219,8 @@ section:nth-of-type(3){
     display: flex;
     justify-content: center;
     align-items: center;
+     /* Change width to 130px on prod */
     width:100px;
-    height: 50px;
     border:1px solid transparent;
     transition: 0.5s;
 }
@@ -246,6 +248,10 @@ section:nth-of-type(3){
     color: #fff;
     border-radius: 6px;
     margin-bottom: 50px;
+}
+
+.awo-trustpilot > div > .awo-h2 {
+    color:white;
 }
 
 .awo-trustpilot > div > .awo-home-button {
@@ -308,6 +314,11 @@ section:nth-of-type(3){
     transition: 0.5s;
 }
 
+.awo-home-button a {
+    color:white;
+    text-decoration: none;
+}
+
 
 .awo-home-button:hover, .close-modal:hover {
     color:#0D2E56;
@@ -345,7 +356,7 @@ section:nth-of-type(3){
         margin-top:40px;
     }
     .awo-hero > section {
-        padding:30px 20px;
+        padding:80px 40px;
     }
     .awo-home-section {
         padding:80px 20px;
@@ -412,7 +423,7 @@ button:hover {
 .awo-reviews-slider {
     width:550px;
     max-width:100%;
-    height:300px;
+    height:340px;
     margin:auto;
     position: relative;
     max-width: 100%;
