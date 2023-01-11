@@ -58,10 +58,6 @@ section:nth-of-type(3){
     margin: auto;
 }
 
-.awo-hero > section {
-    padding:40px 40px;
-}
-
 
 .awo-hero-header {
     text-align: center;
@@ -365,7 +361,7 @@ section:nth-of-type(3){
         padding:30px 20px;
     }
     .awo-home-section {
-        padding:80px 20px;
+        padding:30px 20px;
     }
     .slider-wrapper {
         margin:inherit;
@@ -373,6 +369,9 @@ section:nth-of-type(3){
     .awo-reviews-slider {
         width: 100%;
         margin:auto;
+    }
+    .slider-wrapper {
+        display: none;
     }
 }
 
