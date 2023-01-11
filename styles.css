@@ -185,7 +185,7 @@ section:nth-of-type(3){
     font-weight: 500;
 }
 
-.awo-postcode-search > input {
+.awo-home-input {
     font-family: inherit;
     font-size: 16px;
     padding:10.4px 10px;
@@ -427,7 +427,18 @@ button:hover {
       height: 200px;
   }
 
+.delivery-success {
+    background-color: #00733C;
+    color:#fff;
+    padding:20px;
+}
 
+.delivery-failure {
+    background-color: #FF7A00;
+    color:#fff;
+}
+
+  /* Media queries */
 
   @media (max-width:1000px){
     .col-sm-100 {
@@ -488,3 +499,5 @@ button:hover {
         display: none;
     }
 }
+
+

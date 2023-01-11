@@ -99,3 +99,28 @@ closeAwoModals.forEach((button) => {
 //   });
 // });
 
+
+
+ // Get the form element
+ const form = document.querySelector("#delivery-check-form");
+ form.addEventListener("submit", async (event) => {
+   event.preventDefault();
+
+   const postcode = document.querySelector("#awo-postcode-input").value;
+   const response = await fetch(
+     `https://delivery-app-production.up.railway.app/deliverycheck?q=${postcode}`
+   );
+   const data = await response.json();
+   const deliverySuccess = document.createElement('div');
+   deliverySuccess.style.display = "none"
+   if(data.delivery == "We deliver to your area!"){
+     deliverySuccess.classList.add('delivery-success')
+     deliverySuccess.textContent = data.delivery;
+   } else {
+    deliverySuccess.classList.add('delivery-failure')
+     deliverySuccess.textContent = "Sorry we don't deliver";
+   }
+
+   form.appendChild(deliverySuccess);
+ });
+
