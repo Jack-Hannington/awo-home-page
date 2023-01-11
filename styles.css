@@ -1,9 +1,6 @@
 * {
-    outline:1px solid red;
     box-sizing: border-box;
 }
-
-
 
 main {
     /* max-width: 1200px; */
@@ -38,8 +35,8 @@ main {
     margin: auto;
 }
 
-section > div > p {
-    line-height: 26px;
+.awo-home-section > div > p {
+    line-height: 24px;
     margin-top: 5px;
 }
 
@@ -68,8 +65,8 @@ section:nth-of-type(3){
 
 .awo-hero-header h1 {
     font-weight: 700;
-    font-size: 40px;
-    line-height: 38px;
+    font-size: 50px;
+    line-height: 50px;
     margin-top: 10px;
     color:#fff;
 }
@@ -78,9 +75,9 @@ section:nth-of-type(3){
     font-size: 30px!important;
     color:#0D2E56!important;
     text-align: left!important;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 10px;
-    line-height: 28px;
+    line-height: 30px;
     margin-bottom: 10px;
 }
 
@@ -219,8 +216,7 @@ section:nth-of-type(3){
     display: flex;
     justify-content: center;
     align-items: center;
-     /* Change width to 130px on prod */
-    width:100px;
+    width:130px;
     border:1px solid transparent;
     transition: 0.5s;
 }
@@ -251,7 +247,7 @@ section:nth-of-type(3){
 }
 
 .awo-trustpilot > div > .awo-h2 {
-    color:white;
+    color:white!important;
 }
 
 .awo-trustpilot > div > .awo-home-button {
@@ -282,7 +278,8 @@ section:nth-of-type(3){
     align-items: center;
     flex-direction:column; 
     position: relative;
-    background:#094FA4;
+    background:#0d2e56;
+    border:1.5px solid #CBEAFF;
     color:#CBEAFF;
     color:white;
     font-family: Inter;
@@ -329,6 +326,10 @@ section:nth-of-type(3){
     .col-sm-100 {
         width:100%;
     }
+    .awo-hero-header h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
     .awo-brands-grid {
         display: flex;
         overflow:auto;
@@ -337,23 +338,31 @@ section:nth-of-type(3){
         gap:20px;
         overflow:auto;
     }
+    .awo-hero-header {
+        text-align: left;
+    }
     .awo-promotion-wrapper {
         width:100%;
         justify-content: flex-start;
+        margin-top: 30px;
+        padding-bottom: 20px;
     }
     .awo-hero-cat-button {
         min-width:130px;
         min-height:130px;
-        font-size: 14px;
+        background: #0D2E56;
+        font-size: 16px;
     }
     .awo-hero-cat-button img {
-        width:120px;
+        width:130px;
+        margin-top: -50px;
     }
-    .awo-promotion-wrapper {
-        margin-top: 30px;
+    #delivery-section {
+        background-image:none;
     }
     .awo-brands-grid {
         margin-top:40px;
+        padding-bottom: 20px;
     }
     .awo-hero > section {
         padding:30px 20px;
@@ -446,7 +455,6 @@ button:hover {
     color:white;
     text-align: center;
     padding:0 40px;
-    /* transform: translateY(10%); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -470,5 +478,4 @@ button:hover {
   .awo-review-slide.current {
     opacity: 1;
     transform: translateX(0%);
-    /* transform: translateY(10%); */
   }
