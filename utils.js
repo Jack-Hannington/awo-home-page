@@ -101,26 +101,28 @@ closeAwoModals.forEach((button) => {
 
 
 
- // Get the form element
+ // Check if we deliver from home page form
  const form = document.querySelector("#delivery-check-form");
  form.addEventListener("submit", async (event) => {
    event.preventDefault();
-
+   alert('clicked')
    const postcode = document.querySelector("#awo-postcode-input").value;
    const response = await fetch(
      `https://delivery-app-production.up.railway.app/deliverycheck?q=${postcode}`
    );
    const data = await response.json();
-   const deliverySuccess = document.createElement('div');
-   deliverySuccess.style.display = "none"
+   console.log(data.delivery)
+   const deliveryStatus = document.querySelector('.delivery-check');
+
    if(data.delivery == "We deliver to your area!"){
-     deliverySuccess.classList.add('delivery-success')
-     deliverySuccess.textContent = data.delivery;
+     deliveryStatus.classList.add('delivery-success')
+     deliveryStatus.textContent = "Great news! We deliver to your area";
+     deliveryStatus.classList.remove('delivery-failure')
    } else {
-    deliverySuccess.classList.add('delivery-failure')
-     deliverySuccess.textContent = "Sorry we don't deliver";
+    deliveryStatus.classList.add('delivery-failure')
+     deliveryStatus.textContent = "Sorry we don't deliver to that area";
    }
 
-   form.appendChild(deliverySuccess);
+   form.appendChild(deliveryStatus);
  });
 
