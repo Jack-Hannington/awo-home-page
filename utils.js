@@ -105,7 +105,6 @@ closeAwoModals.forEach((button) => {
  const form = document.querySelector("#delivery-check-form");
  form.addEventListener("submit", async (event) => {
    event.preventDefault();
-   alert('clicked')
    const postcode = document.querySelector("#awo-postcode-input").value;
    const response = await fetch(
      `https://delivery-app-production.up.railway.app/deliverycheck?q=${postcode}`
