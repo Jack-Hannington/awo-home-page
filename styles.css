@@ -315,65 +315,6 @@ section:nth-of-type(3){
     background-color:#094FA4;
 }
 
-@media (max-width:1000px){
-    .col-sm-100 {
-        width:100%;
-    }
-    .awo-hero-header h1 {
-        font-size: 40px;
-        line-height: 40px;
-    }
-    .awo-brands-grid {
-        display: flex;
-        overflow:auto;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap:20px;
-        overflow:auto;
-    }
-    .awo-hero-header {
-        text-align: left;
-    }
-    .awo-promotion-wrapper {
-        width:100%;
-        justify-content: flex-start;
-        margin-top: 30px;
-        padding-bottom: 20px;
-    }
-    .awo-hero-cat-button {
-        min-width:130px;
-        min-height:130px;
-        background: #0D2E56;
-        font-size: 16px;
-    }
-    .awo-hero-cat-button img {
-        width:130px;
-        margin-top: -50px;
-    }
-    #delivery-section {
-        background-image:none;
-    }
-    .awo-brands-grid {
-        margin-top:40px;
-        padding-bottom: 20px;
-    }
-    .awo-hero > section {
-        padding:30px 20px;
-    }
-    .awo-home-section {
-        padding:30px 20px;
-    }
-    .slider-wrapper {
-        margin:inherit;
-    }
-    .awo-reviews-slider {
-        width: 100%;
-        margin:auto;
-    }
-    .slider-wrapper {
-        display: none;
-    }
-}
 
 
 /* Slider styles */
@@ -475,3 +416,75 @@ button:hover {
     opacity: 1;
     transform: translateX(0%);
   }
+
+  .awo-review {
+      background-color: #206AC2;
+      padding:20px;
+      border-radius: 4px;;
+      display: flex;
+      flex-direction: column;
+      width: 460px;
+      height: 200px;
+  }
+
+
+
+  @media (max-width:1000px){
+    .col-sm-100 {
+        width:100%;
+    }
+    .awo-hero-header h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .awo-brands-grid {
+        display: flex;
+        overflow:auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap:20px;
+        overflow:auto;
+    }
+    .awo-hero-header {
+        text-align: left;
+    }
+    .awo-promotion-wrapper {
+        width:100%;
+        justify-content: flex-start;
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+    .awo-hero-cat-button {
+        min-width:130px;
+        min-height:130px;
+        background: #0D2E56;
+        font-size: 16px;
+    }
+    .awo-hero-cat-button img {
+        width:130px;
+        margin-top: -50px;
+    }
+    #delivery-section {
+        background-image:none;
+    }
+    .awo-brands-grid {
+        margin-top:40px;
+        padding-bottom: 20px;
+    }
+    .awo-home-section {
+        padding:30px 20px;
+    }
+    #hero {
+        padding:40px 20px;
+    }
+    .slider-wrapper {
+        margin:inherit;
+    }
+    .awo-reviews-slider {
+        width: 100%;
+        margin:auto;
+    }
+    .awo-review {
+        display: none;
+    }
+}
