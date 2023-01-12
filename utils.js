@@ -113,7 +113,7 @@ closeAwoModals.forEach((button) => {
        deliveryStatus.textContent = "Please enter at your full post code without spaces."
    } else {
    const response = await fetch(
-     `http://localhost:3000/deliverycheck?q=${postcode}`
+     `https://delivery-app-production.up.railway.app/deliverycheck?q=${postcode}`
    );
    const data = await response.json();
    console.log(data)
