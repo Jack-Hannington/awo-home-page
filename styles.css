@@ -430,13 +430,27 @@ button:hover {
 .delivery-check {
     display: block;
     background-color: grey;
-    /* background-color: #00733C; */
-    max-width: 80%;
+    max-width: 100%;
     color:#fff;
     padding:20px;
     border-radius: 6px;
     margin-top:20px;
     display: none;
+  }
+
+  #awo-delivery-map {
+      border-radius: 6px;
+      padding:12px 22px;
+      min-height: auto;
+      min-width: auto;
+      font-weight: 400;
+      font-size: 14px;
+      background-color:#fff;
+      border:1px solid #0D2E56;
+      margin-top: 20px;
+      color:#0D2E56;
+      display: none;
+      max-width:300px
   }
 
 .delivery-success {

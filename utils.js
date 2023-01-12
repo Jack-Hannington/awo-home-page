@@ -9,6 +9,7 @@ let activeModal;
 allCatButons.forEach((button) => {
   button.addEventListener('click', (event) => {
       activeModal = event.target.dataset.modal;
+      console.log(activeModal);
       showModal = document.getElementById(activeModal);
       showModal.classList.add('show-modal');
   })
@@ -106,22 +107,31 @@ closeAwoModals.forEach((button) => {
  form.addEventListener("submit", async (event) => {
    event.preventDefault();
    const postcode = document.querySelector("#awo-postcode-input").value;
+   const deliveryStatus = document.querySelector('.delivery-check');
+   if (postcode.length < 3){
+       deliveryStatus.style.display = "block";
+       deliveryStatus.textContent = "Please enter at your full post code without spaces."
+   } else {
    const response = await fetch(
-     `https://delivery-app-production.up.railway.app/deliverycheck?q=${postcode}`
+     `http://localhost:3000/deliverycheck?q=${postcode}`
    );
    const data = await response.json();
-   console.log(data.delivery)
-   const deliveryStatus = document.querySelector('.delivery-check');
+   console.log(data)
+ 
 
-   if(data.delivery == "We deliver to your area!"){
+   
+   if(data.length > 0){
+    const nextDeliveryDate = data[0];
      deliveryStatus.classList.add('delivery-success')
-     deliveryStatus.textContent = "Great news! We deliver to your area";
+     deliveryStatus.textContent = `Great news! Your next available delivery date is ${nextDeliveryDate}. Continue with you order to confirm a delivery date`;
      deliveryStatus.classList.remove('delivery-failure')
    } else {
     deliveryStatus.classList.add('delivery-failure')
-     deliveryStatus.textContent = "Sorry we don't deliver to that area";
+     deliveryStatus.textContent = "Looks like we don't deliver to that area. Is your postcode correct?";
+ 
    }
-
+  }
+  document.querySelector('#awo-delivery-map').style.display = "block";
    form.appendChild(deliveryStatus);
  });
 
