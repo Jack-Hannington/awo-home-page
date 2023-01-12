@@ -9,7 +9,6 @@ let activeModal;
 allCatButons.forEach((button) => {
   button.addEventListener('click', (event) => {
       activeModal = event.target.dataset.modal;
-      console.log(activeModal);
       showModal = document.getElementById(activeModal);
       showModal.classList.add('show-modal');
   })
@@ -23,10 +22,6 @@ closeAwoModals.forEach((button) => {
         })
       })
 })
-
-
-
-
 
 
 
