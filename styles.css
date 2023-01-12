@@ -110,7 +110,6 @@ section:nth-of-type(3){
 .modal-content > ul > li {
     list-style-type: none;
     margin-block-start: 0px;
-    padding: 12px;
     border-radius: 4px;
     border: 1px solid #ededed;
     text-decoration: none;
@@ -121,6 +120,8 @@ section:nth-of-type(3){
 .modal-content > ul > li > a {
     text-decoration: none;
     color:inherit;
+    display: block;
+    padding:12px;
 }
 
 .modal-content > ul > li:hover {
@@ -164,7 +165,7 @@ section:nth-of-type(3){
 /* Delivery section */
 
 #delivery-section {
-    background-color: #EAF3FF;
+    /* background-color: #EAF3FF; */
     border-radius: 6px;
     background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1673339159/AWO/AWO%20home%20page/UK_map_grey_ujkmqp.png');
     background-size: contain;
@@ -235,16 +236,16 @@ section:nth-of-type(3){
 
 /* Trustpilot section */
 
-.awo-trustpilot {
+/* .awo-trustpilot {
     background-color: #094FA4;
     color: #fff;
     border-radius: 6px;
     margin-bottom: 50px;
-}
+} */
 
-.awo-trustpilot > div > .awo-h2 {
+/* .awo-trustpilot > div > .awo-h2 {
     color:white!important;
-}
+} */
 
 .awo-trustpilot > div > .awo-home-button {
     margin-bottom: 10px;
@@ -419,7 +420,7 @@ button:hover {
   }
 
   .awo-review {
-      background-color: #206AC2;
+      background-color: #e5f1ff;
       padding:20px;
       border-radius: 4px;;
       display: flex;
@@ -491,11 +492,21 @@ button:hover {
         margin-top: 30px;
         padding-bottom: 20px;
     }
+    .awo-home-cat-container, .awo-promotion-wrapper{
+        mask-image: linear-gradient(to right,transparent,black 0px,black 80%,transparent);
+        -webkit-mask-image: linear-gradient(to right,transparent,black 0px,black 80%,transparent);
+    }
     .awo-hero-cat-button {
         min-width:130px;
         min-height:130px;
         background: #0D2E56;
         font-size: 16px;
+    }
+    .awo-hero-cat-button:last-child{
+        margin-right: 60px;
+    }
+    .awo-promotion-card:last-child {
+        margin-right: 60px;
     }
     .awo-hero-cat-button img {
         width:130px;

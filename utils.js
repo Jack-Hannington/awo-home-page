@@ -117,12 +117,13 @@ closeAwoModals.forEach((button) => {
    
    if(data.length > 0){
     const nextDeliveryDate = data[0];
+    const countOfDeliveries = data.length;
      deliveryStatus.classList.add('delivery-success')
-     deliveryStatus.textContent = `Great news! Your next available delivery date is ${nextDeliveryDate}. Continue with you order to confirm a delivery date`;
+     deliveryStatus.textContent = `Great news! Our next available delivery date is ${nextDeliveryDate}. Continue with you order to confirm a delivery date. We deliver to your area ${countOfDeliveries} times per week.`;
      deliveryStatus.classList.remove('delivery-failure')
    } else {
     deliveryStatus.classList.add('delivery-failure')
-     deliveryStatus.textContent = "Looks like we don't deliver to that area. Is your postcode correct?";
+     deliveryStatus.textContent = "Looks like we don't deliver to that area. Is your postcode correct? Please open the delivery map below to see where we deliver to.";
  
    }
   }
