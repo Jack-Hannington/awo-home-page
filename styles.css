@@ -92,7 +92,7 @@ section:nth-of-type(3){
     background-color: white;
     color:#0D2E56;
     border-radius: 6px;
-    padding:20px;
+    padding:20px 20px 20px 20px;
     display: none;
     display: flex;
     flex-direction: column;
@@ -102,6 +102,7 @@ section:nth-of-type(3){
     max-width: 80%;
     text-align: center;
 }
+
 
 .modal-content > ul {
     padding-inline-start: 0px;
@@ -234,19 +235,6 @@ section:nth-of-type(3){
     max-width: 100%;
 }
 
-/* Trustpilot section */
-
-/* .awo-trustpilot {
-    background-color: #094FA4;
-    color: #fff;
-    border-radius: 6px;
-    margin-bottom: 50px;
-} */
-
-/* .awo-trustpilot > div > .awo-h2 {
-    color:white!important;
-} */
-
 .awo-trustpilot > div > .awo-home-button {
     margin-bottom: 10px;
 }
@@ -304,6 +292,8 @@ section:nth-of-type(3){
     padding:12px 22px;
     text-decoration: none;
     font-size: 14px;
+    line-height: 16px;
+    height: auto;
     display: inline-block;
     transition: 0.5s;
 }
@@ -451,7 +441,7 @@ button:hover {
       border:1px solid #0D2E56;
       margin-top: 20px;
       color:#0D2E56;
-      display: none;
+      /* display: none; */
       max-width:300px
   }
 
@@ -474,6 +464,7 @@ button:hover {
     .awo-hero-header h1 {
         font-size: 40px;
         line-height: 40px;
+        margin-bottom: 30px;
     }
     .awo-brands-grid {
         display: flex;
@@ -493,8 +484,8 @@ button:hover {
         padding-bottom: 20px;
     }
     .awo-home-cat-container, .awo-promotion-wrapper{
-        mask-image: linear-gradient(to right,transparent,black 0px,black 80%,transparent);
-        -webkit-mask-image: linear-gradient(to right,transparent,black 0px,black 80%,transparent);
+        mask-image: linear-gradient(to right,transparent,black 0px,black 70%,transparent);
+        -webkit-mask-image: linear-gradient(to right,transparent,rgb(0, 0, 0) 0px,black 95%,transparent);
     }
     .awo-hero-cat-button {
         min-width:130px;

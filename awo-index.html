@@ -1,21 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AWO home page - Jan 2023</title>
-    <link href="/styles.css" rel="stylesheet" type="text/css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWO home page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
-  </head>
-
-  <body>
-    <main>
+</head>
+<body>
+    <style>
+        .col-lg-100 {
+            width:100%; 
+        }
+        
+        .col-lg-50 {
+            width:50%;
+        }
+        .col-lg-60 {
+            width:60%;
+        }
+        
+        .col-lg-40 {
+            width:40%;
+        }
+        
+        
+        .awo-home-section {
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Inter', 'sans-serif';
+            padding: 60px 40px;
+            background-color: #f3f8ff;
+            border:1px solid #ededed;
+            color:#0D2E56;
+            border-radius: 6px;
+            max-width: 1200px;
+            margin: 10px auto;
+        }
+        
+        .awo-home-section > div > p {
+            line-height: 24px;
+            margin-top: 5px;
+        }
+        
+        section:nth-of-type(3){
+            margin-top:300px; 
+        }
+        
+        
+        
+        .awo-hero {
+            background-color: rgb(225, 236, 251);
+            background: linear-gradient(178.43deg, #094FA4 2.78%, rgba(9, 79, 164, 0) 94.26%);
+            background: linear-gradient(178.21deg, #094FA4 2.95%, rgba(9, 79, 164, 0) 110.51%);
+            border-radius: 6px;
+            position: relative;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        
+        .awo-hero-header {
+            text-align: center;
+            color:#F0F3FD;
+        ;
+        }
+        
+        .awo-hero-header h1 {
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 50px;
+            margin-top: 10px;
+            color:#fff;
+        }
+        
+        .awo-h2 {
+            font-size: 30px!important;
+            color:#0D2E56!important;
+            text-align: left!important;
+            font-weight: 600;
+            margin-top: 10px;
+            line-height: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .awo-hero-modal {
+            display: none;
+        }
+        
+        
+        .modal-content {
+            background-color: white;
+            color:#0D2E56;
+            border-radius: 6px;
+            padding:20px;
+            display: none;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin:auto;
+            width:500px;
+            max-width: 80%;
+            text-align: center;
+        }
+        
+        .modal-content > ul {
+            padding-inline-start: 0px;
+        }
+        
+        .modal-content > ul > li {
+            list-style-type: none;
+            margin-block-start: 0px;
+            border-radius: 4px;
+            border: 1px solid #ededed;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.5s;
+        }
+        
+        .modal-content > ul > li > a {
+            text-decoration: none;
+            color:inherit;
+            display: block;
+            padding:12px;
+        }
+        
+        .modal-content > ul > li:hover {
+            background-color: #0D2E56;
+            color: white;
+            cursor: pointer;
+        }
+        
+        
+        
+        
+        .show-modal {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position:absolute;
+            width:100%;
+            height:100vh;
+            left:0;
+            z-index: 1;
+            top:0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        
+        .awo-promotion-wrapper {
+            width:50%;
+            display:flex;
+            overflow:auto;
+            gap:20px;
+            justify-content: flex-end;
+          }
+          
+        .awo-promotion-card {
+            min-width:160px;
+          }
+        .awo-promotion-card img {
+            width:160px;
+        }
+        
+        /* Delivery section */
+        
+        #delivery-section {
+            /* background-color: #EAF3FF; */
+            border-radius: 6px;
+            background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1673339159/AWO/AWO%20home%20page/UK_map_grey_ujkmqp.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 40%;
+            margin-top:10px;
+            margin-bottom: 10px;
+        }
+        
+        
+        .awo-postcode-search {
+            padding:10px 0px;
+        }
+        
+        
+        #delivery-check-form > label{
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-family: Inter;
+        /* display:none; */
+        }
+        
+        .awo-home-input {
+            font-family: inherit;
+            font-size: 16px;
+            padding:10.4px 10px;
+            border:1px solid lightgray;
+            border-radius: 4px;
+            text-transform: uppercase;
+           /* display:none; */
+        }
+        
+        
+        .awo-brands-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap:15px;
+            align-items: center;
+        }
+        
+        
+        .awo-brand {
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:130px;
+            border:1px solid transparent;
+            transition: 0.5s;
+        }
+        
+        .awo-brand:hover  {
+            border: 1px solid #0C57B1;
+            background:#f5f5f5;
+        }
+        
+        .awo-promotion-card:hover {
+            opacity: 0.7;
+        }
+        
+        .awo-brands-img {
+            min-width: 90px;
+            aspect-ratio: 3/2;
+            object-fit: contain;
+            max-width: 100%;
+        }
+        .awo-trustpilot > div > .awo-home-button {
+            margin-bottom: 10px;
+        }
+        
+        .awo-home-cat-container {
+            display: flex;
+            width: 100%;
+            gap:20px;
+            overflow: auto;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding:20px 0px 10px 0px;
+        }
+        
+        .awo-hero-cat-button {
+            min-width:120px;
+            min-height: 120px;
+            font-size: 14px;
+            text-align: center;
+            border-radius:50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column; 
+            position: relative;
+            background:#0d2e56;
+            border:1.5px solid #CBEAFF;
+            color:#CBEAFF;
+            color:white;
+            font-family: Inter;
+            font-weight: 500;
+        }
+        
+        .awo-hero-cat-button:hover {
+            cursor: pointer;
+        }
+        
+        .awo-hero-cat-button img {
+            margin-top:-30px;
+            width:120px;
+            aspect-ratio: 3/2;
+            max-width: 100%;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .awo-home-button, .close-modal, #postcode-search{
+            border-radius: 4px;
+            border:1px solid transparent;
+            background-color:#0D2E56;
+            color:#f5f5f5!important;
+            font-family: Inherit;
+            padding:12px 22px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            transition: 0.5s;
+            line-height:16px;
+            height:auto;
+        }
+        
+        /* #postcode-search {
+           display:none;
+        }
+         */
+        .awo-home-button a {
+            color:white;
+            text-decoration: none;
+        }
+        
+        .awo-home-button:hover, .close-modal:hover {
+            background-color:#094FA4;
+        }
+        
+        
+        
+        /* Slider styles */
+        
+        .awo-slider-toggle {
+            border:1px solid #ededed;
+            border-radius:50px;
+            height:30px;
+            width:30px;
+            position:absolute;
+            background-color: #0C57B1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        
+        .awo-slider-toggle:hover {
+            background-color: white;
+            color:#0C57B1;
+        }
+        
+        #next {
+            left:100%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #prev {
+            left:0%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        
+        }
+        
+        button:hover {
+            cursor:pointer;
+        }
+        
+        .slider-wrapper{
+            max-width: 100%;
+            margin:auto;
+        }
+        
+        .awo-reviews-track {
+            position: relative;
+            width: 100%;
+            height:100%;
+            overflow: hidden;
+        }
+          
+        .awo-reviews-slider {
+            width:550px;
+            max-width:100%;
+            height:340px;
+            margin:auto;
+            position: relative;
+            max-width: 100%;
+            background:#f5f5f5;
+            border-radius:10px;
+            border:none;
+            background-color: #0C57B1;
+        }
+        
+          .current {
+            display: block;
+          }
+        
+          .awo-review-slide {
+            height:100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s, transform 1s;
+            transform: translateX(100%);
+            color:white;
+            text-align: center;
+            padding:0 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+        
+          .awo-review-slide h3 {
+              font-weight: 500;
+              color: #EAF3FF;
+          }
+        
+          .awo-review-slide p:nth-of-type(2) {
+              color:#A9D0FF;
+          }
+        
+          .awo-review-slide p {
+              margin:10px
+          }
+        
+          
+          .awo-review-slide.current {
+            opacity: 1;
+            transform: translateX(0%);
+          }
+        
+          .awo-review {
+              background-color: #e5f1ff;
+              padding:20px;
+              border-radius: 4px;;
+              display: flex;
+              flex-direction: column;
+              width: 460px;
+              height: 200px;
+          }
+        
+        .delivery-check {
+            display: block;
+            background-color: grey;
+            max-width: 100%;
+            color:#fff;
+            padding:20px;
+            border-radius: 6px;
+            margin-top:20px;
+            display: none;
+          }
+        
+          #awo-delivery-map {
+              border-radius: 6px;
+              padding:12px 22px;
+              min-height: auto;
+              min-width: auto;
+              margin-top: 20px;
+              font-weight: 400;
+              font-size: 14px;
+              background-color:#fff;
+              border:1px solid #a1a4a8;
+              color:#0D2E56;
+              display: block;
+              width:140px
+          }
+        
+        .delivery-success {
+            background-color: #00733C;
+            display: block;
+        }
+        
+        .delivery-failure {
+            background-color: grey;
+            display: block;
+        }
+        
+          /* Media queries */
+        
+          @media (max-width:1000px){
+            .col-sm-100 {
+                width:100%;
+            }
+            .awo-hero-header h1 {
+                font-size: 40px;
+                line-height: 40px;
+               margin-bottom:30px;
+            }
+            .awo-brands-grid {
+                display: flex;
+                overflow:auto;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                gap:20px;
+                overflow:auto;
+            }
+            .awo-hero-header {
+                text-align: left;
+            }
+            .awo-promotion-wrapper {
+                width:100%;
+                justify-content: flex-start;
+                margin-top: 30px;
+                padding-bottom: 20px;
+            }
+            .awo-home-cat-container, .awo-promotion-wrapper{
+                mask-image: linear-gradient(to right,transparent,black 0px,black 95%,transparent);
+                -webkit-mask-image: linear-gradient(to right,transparent,black 0px,black 95%,transparent);
+            }
+            .awo-hero-cat-button {
+                min-width:130px;
+                min-height:130px;
+                background: #0D2E56;
+                font-size: 16px;
+            }
+            .awo-hero-cat-button:last-child{
+                margin-right: 60px;
+            }
+            .awo-promotion-card:last-child {
+                margin-right: 60px;
+            }
+            .awo-hero-cat-button img {
+                width:130px;
+                margin-top: -50px;
+            }
+            #delivery-section {
+                background-image:none;
+            }
+            .awo-brands-grid {
+                margin-top:40px;
+                padding-bottom: 20px;
+            }
+            .awo-home-section {
+                padding:30px 20px;
+            }
+            #hero {
+                padding:40px 20px;
+            }
+            .slider-wrapper {
+                margin:inherit;
+            }
+            .awo-reviews-slider {
+                width: 100%;
+                margin:auto;
+            }
+            .awo-review {
+                display: none;
+            }
+        }
+        
+        
+        </style>
         <section class="awo-home-section awo-hero" id="hero">
           <div class="col-lg-100 col-sm-100 awo-hero-header">
             <a href="https://uk.trustpilot.com/review/applianceworldonline.com" title="Trustpilot"><img
@@ -97,8 +619,8 @@
             </p>
             <h2 class="awo-h2">Discount codes</h2>
             <p>
-              Every discount is on top of our price match service and free
-              delivery so you know you’re getting a great deal every time.
+              Take advantage of our discount codes which are on top of our already low prices. Plus we offer free
+              delivery on orders over £200.
             </p>
             <a
               class="awo-home-button"
@@ -128,7 +650,7 @@
             </div>
             <div class="awo-promotion-card">
               <a
-                href="https://res.cloudinary.com/db2okldfm/image/upload/v1670235402/AWO/Bosch_button_2_yryqke.png"
+                href="https://www.applianceworldonline.com/brand/bosch?_=1670232508448&product_list_order=position&stockavailability=6660%2C6661"
                 title="bosch promo"
                 ><img
                   src="https://res.cloudinary.com/db2okldfm/image/upload/v1673356863/AWO/AWO%20home%20page/Bosch_discount_card_ptfvx9.png"
@@ -137,8 +659,8 @@
             </div>
           </div>
         </section>
-   
-      <section class="awo-home-section" id="delivery-section" style="position:relative;">
+        
+        <section class="awo-home-section" id="delivery-section" style="position:relative;">
         <div class="awo-hero-modal" id="delivery-map">
           <div class="modal-content">
             <h3>Delivery</h3>
@@ -154,9 +676,9 @@
           <p>
             We are a Manchester based, family owned business, that offers free
             delivery to most post-codes in the UK. Connect to real people and
-            get expert advice quickly by calling <strong>0161 794 3030</strong>,
-            opening a live chat or visiting one of our two showrooms based in
-            <a href="https://www.applianceworldonline.com/showroom-opening">Swinton</a> and <a href="https://www.applianceworldonline.com/showroom-opening">Urmston</a>.
+            get expert advice quickly by calling <strong>0161 794 3030</strong>. You can also open
+             a live chat or visit one of our two showrooms based in
+            <a href="https://www.applianceworldonline.com/showroom-opening" title="Swinton">Swinton</a> and <a href="https://www.applianceworldonline.com/showroom-opening" title="Urmston">Urmston</a>.
           </p>
           <div class="awo-postcode-search">
             <form style="position: relative" id="delivery-check-form">
@@ -262,8 +784,8 @@
           </div>
         </a>
         </div>
-      </section>
-      <section class="awo-trustpilot awo-home-section">
+        </section>
+        <section class="awo-trustpilot awo-home-section">
         <div class="col-lg-50 col-sm-100">
           <a href="https://uk.trustpilot.com/review/applianceworldonline.com" title="trustpilot"><img
             style="width: 200px; margin-bottom: 5px"
@@ -291,8 +813,8 @@
            <p>by Frank Lutwyche</p>
          </div>
         </div>
-      </section>
-      <div class="awo-hero-modal" id="Dishwashers">
+        </section>
+        <div class="awo-hero-modal" id="Dishwashers">
         <div class="modal-content">
           <h3>Dishwashers</h3>
           <ul>
@@ -307,17 +829,29 @@
                 >60CM dishwashers</a
               >
             </li>
+           <li>
+              <a
+                href="https://www.applianceworldonline.com/dishwashers/60cm-dishwashers/fully-integrated-60cm-dishwashers?_=1673604326214&product_list_order=price&stockavailability=6660%2C6661"
+                >Integrated 60CM dishwashers</a
+              >
+            </li>
             <li>
               <a
                 href="https://www.applianceworldonline.com/dishwashers/45cm-dishwashers?_=1668677249899&product_list_order=price&stockavailability=6660%2C6661"
                 >45CM dishwashers</a
               >
             </li>
+            <li>
+              <a
+                href="https://www.applianceworldonline.com/dishwashers/45cm-dishwashers/fully-integrated-45cm-dishwasers?product_list_dir=desc"
+                >Integrated 45CM dishwashers</a
+              >
+            </li>
           </ul>
           <a class="close-modal">Close</a>
         </div>
-      </div>
-      <div class="awo-hero-modal" id="Fridge-freezers">
+        </div>
+        <div class="awo-hero-modal" id="Fridge-freezers">
         <div class="modal-content">
           <h3>Fridges and freezers</h3>
           <ul>
@@ -349,8 +883,8 @@
           </ul>
           <a class="close-modal">Close</a>
         </div>
-      </div>
-      <div class="awo-hero-modal" id="Dryers">
+        </div>
+        <div class="awo-hero-modal" id="Dryers">
         <div class="modal-content">
           <h3>Dryers</h3>
           <ul>
@@ -387,8 +921,8 @@
           </ul>
           <a class="close-modal">Close</a>
         </div>
-      </div>
-      <div class="awo-hero-modal" id="Hobs">
+        </div>
+        <div class="awo-hero-modal" id="Hobs">
         <div class="modal-content">
           <h3>Hobs</h3>
           <ul>
@@ -425,8 +959,8 @@
           </ul>
           <a class="close-modal">Close</a>
         </div>
-      </div>
-      <div class="awo-hero-modal" id="Ovens">
+        </div>
+        <div class="awo-hero-modal" id="Ovens">
         <div class="modal-content">
           <h3>Ovens</h3>
           <ul>
@@ -469,8 +1003,8 @@
           </ul>
           <a class="close-modal">Close</a>
         </div>
-      </div>
-      <div class="awo-hero-modal" id="Washers">
+        </div>
+        <div class="awo-hero-modal" id="Washers">
         <div class="modal-content">
           <h3>Washing Machines</h3>
           <ul>
@@ -498,12 +1032,12 @@
                 >Integrated washing machines</a
               >
             </li>
-
+        
           </ul>
           <a class="close-modal">Close</a>
         </div>
-      </div>
-      <div class="awo-hero-modal" id="Cooker-hoods">
+        </div>
+        <div class="awo-hero-modal" id="Cooker-hoods">
         <div class="modal-content">
           <h3>Cooker Hoods</h3>
           <ul>
@@ -528,11 +1062,14 @@
           </ul>
           <a class="close-modal">Close</a>
         </div>
-      </div>
-      <div class="awo-hero-modal" id="Other-appliances">
+        </div>
+        <div class="awo-hero-modal" id="Other-appliances">
         <div class="modal-content">
           <h3>Other appliances</h3>
           <ul>
+           <li> <a
+              href="https://www.applianceworldonline.com/cooking/warming-drawers?product_list_dir=desc"
+              >Warming draws</a></li>
             <li> <a
               href="https://www.applianceworldonline.com/other-appliances/coffee-machines?_=1668680799803&product_list_dir=desc"
               >Coffee centres</a></li>
@@ -544,6 +1081,12 @@
             </li>
             <li>
               <a
+                href="https://www.applianceworldonline.com/tefal-fz727840-400022183"
+                >Air Fryers</a
+              >
+            </li>
+            <li>
+              <a
                 href="https://www.applianceworldonline.com/sinks-and-taps?_=1668680692872&product_list_order=price&stockavailability=6660%2C6661"
                 >Sinks and taps</a
               >
@@ -551,10 +1094,7 @@
           </ul>
           <a class="close-modal">Close</a>
         </div>
-      </div>
-
-    </main>
-
-    <script src="/utils.js" type="text/javascript"></script>
-  </body>
+        </div>
+        <script src="/utils.js" type="text/javascript"></script>
+</body>
 </html>
