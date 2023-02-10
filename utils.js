@@ -112,14 +112,12 @@ closeAwoModals.forEach((button) => {
    );
    const data = await response.json();
    console.log(data)
- 
-
    
    if(data.length > 0){
     const nextDeliveryDate = data[0];
     const countOfDeliveries = data.length;
      deliveryStatus.classList.add('delivery-success')
-     deliveryStatus.textContent = `Great news! Our next available delivery date is ${nextDeliveryDate}. Continue with you order to confirm a delivery date. We deliver to your area ${countOfDeliveries} times per week.`;
+     deliveryStatus.textContent = `Great news! Our next provisional delivery date is ${nextDeliveryDate}. Continue with you order to confirm your delivery date. We deliver to your area ${countOfDeliveries} times per week.`;
      deliveryStatus.classList.remove('delivery-failure')
    } else {
     deliveryStatus.classList.add('delivery-failure')

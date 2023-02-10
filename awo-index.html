@@ -1,1100 +1,1045 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWO home page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;900&family=Inter:wght@400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWO home page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <style>
-        .col-lg-100 {
-            width:100%; 
-        }
-        
-        .col-lg-50 {
-            width:50%;
-        }
-        .col-lg-60 {
-            width:60%;
-        }
-        
-        .col-lg-40 {
-            width:40%;
-        }
-        
-        
-        .awo-home-section {
-            display: flex;
-            flex-wrap: wrap;
-            font-family: 'Inter', 'sans-serif';
-            padding: 60px 40px;
-            background-color: #f3f8ff;
-            border:1px solid #ededed;
-            color:#0D2E56;
-            border-radius: 6px;
-            max-width: 1200px;
-            margin: 10px auto;
-        }
-        
-        .awo-home-section > div > p {
-            line-height: 24px;
-            margin-top: 5px;
-        }
-        
-        section:nth-of-type(3){
-            margin-top:300px; 
-        }
-        
-        
-        
-        .awo-hero {
-            background-color: rgb(225, 236, 251);
-            background: linear-gradient(178.43deg, #094FA4 2.78%, rgba(9, 79, 164, 0) 94.26%);
-            background: linear-gradient(178.21deg, #094FA4 2.95%, rgba(9, 79, 164, 0) 110.51%);
-            border-radius: 6px;
-            position: relative;
-            max-width: 1200px;
-            margin: auto;
-        }
-        
-        
-        .awo-hero-header {
-            text-align: center;
-            color:#F0F3FD;
-        ;
-        }
-        
-        .awo-hero-header h1 {
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
-            margin-top: 10px;
-            color:#fff;
-        }
-        
-        .awo-h2 {
-            font-size: 30px!important;
-            color:#0D2E56!important;
-            text-align: left!important;
-            font-weight: 600;
-            margin-top: 10px;
-            line-height: 30px;
-            margin-bottom: 15px;
-        }
-        
-        .awo-hero-modal {
-            display: none;
-        }
-        
-        
-        .modal-content {
-            background-color: white;
-            color:#0D2E56;
-            border-radius: 6px;
-            padding:20px;
-            display: none;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            margin:auto;
-            width:500px;
-            max-width: 80%;
-            text-align: center;
-        }
-        
-        .modal-content > ul {
-            padding-inline-start: 0px;
-        }
-        
-        .modal-content > ul > li {
-            list-style-type: none;
-            margin-block-start: 0px;
-            border-radius: 4px;
-            border: 1px solid #ededed;
-            text-decoration: none;
-            margin-bottom: 10px;
-            transition: 0.5s;
-        }
-        
-        .modal-content > ul > li > a {
-            text-decoration: none;
-            color:inherit;
-            display: block;
-            padding:12px;
-        }
-        
-        .modal-content > ul > li:hover {
-            background-color: #0D2E56;
-            color: white;
-            cursor: pointer;
-        }
-        
-        
-        
-        
-        .show-modal {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position:absolute;
-            width:100%;
-            height:100vh;
-            left:0;
-            z-index: 1;
-            top:0;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        
-        
-        .awo-promotion-wrapper {
-            width:50%;
-            display:flex;
-            overflow:auto;
-            gap:20px;
-            justify-content: flex-end;
-          }
-          
-        .awo-promotion-card {
-            min-width:160px;
-          }
-        .awo-promotion-card img {
-            width:160px;
-        }
-        
-        /* Delivery section */
-        
-        #delivery-section {
-            /* background-color: #EAF3FF; */
-            border-radius: 6px;
-            background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1673339159/AWO/AWO%20home%20page/UK_map_grey_ujkmqp.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: 40%;
-            margin-top:10px;
-            margin-bottom: 10px;
-        }
-        
-        
-        .awo-postcode-search {
-            padding:10px 0px;
-        }
-        
-        
-        #delivery-check-form > label{
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 500;
-            font-family: Inter;
-        /* display:none; */
-        }
-        
-        .awo-home-input {
-            font-family: inherit;
-            font-size: 16px;
-            padding:10.4px 10px;
-            border:1px solid lightgray;
-            border-radius: 4px;
-            text-transform: uppercase;
-           /* display:none; */
-        }
-        
-        
-        .awo-brands-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap:15px;
-            align-items: center;
-        }
-        
-        
-        .awo-brand {
-            background-color: #fff;
-            border-radius: 6px;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width:130px;
-            border:1px solid transparent;
-            transition: 0.5s;
-        }
-        
-        .awo-brand:hover  {
-            border: 1px solid #0C57B1;
-            background:#f5f5f5;
-        }
-        
-        .awo-promotion-card:hover {
-            opacity: 0.7;
-        }
-        
-        .awo-brands-img {
-            min-width: 90px;
-            aspect-ratio: 3/2;
-            object-fit: contain;
-            max-width: 100%;
-        }
-        .awo-trustpilot > div > .awo-home-button {
-            margin-bottom: 10px;
-        }
-        
-        .awo-home-cat-container {
-            display: flex;
-            width: 100%;
-            gap:20px;
-            overflow: auto;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            padding:20px 0px 10px 0px;
-        }
-        
-        .awo-hero-cat-button {
-            min-width:120px;
-            min-height: 120px;
-            font-size: 14px;
-            text-align: center;
-            border-radius:50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction:column; 
-            position: relative;
-            background:#0d2e56;
-            border:1.5px solid #CBEAFF;
-            color:#CBEAFF;
-            color:white;
-            font-family: Inter;
-            font-weight: 500;
-        }
-        
-        .awo-hero-cat-button:hover {
-            cursor: pointer;
-        }
-        
-        .awo-hero-cat-button img {
-            margin-top:-30px;
-            width:120px;
-            aspect-ratio: 3/2;
-            max-width: 100%;
-            object-fit: contain;
-            margin-bottom: 10px;
-        }
-        .awo-home-button, .close-modal, #postcode-search{
-            border-radius: 4px;
-            border:1px solid transparent;
-            background-color:#0D2E56;
-            color:#f5f5f5!important;
-            font-family: Inherit;
-            padding:12px 22px;
-            text-decoration: none;
-            font-size: 14px;
-            display: inline-block;
-            transition: 0.5s;
-            line-height:16px;
-            height:auto;
-        }
-        
-        /* #postcode-search {
-           display:none;
-        }
-         */
-        .awo-home-button a {
-            color:white;
-            text-decoration: none;
-        }
-        
-        .awo-home-button:hover, .close-modal:hover {
-            background-color:#094FA4;
-        }
-        
-        
-        
-        /* Slider styles */
-        
-        .awo-slider-toggle {
-            border:1px solid #ededed;
-            border-radius:50px;
-            height:30px;
-            width:30px;
-            position:absolute;
-            background-color: #0C57B1;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-        }
-        
-        .awo-slider-toggle:hover {
-            background-color: white;
-            color:#0C57B1;
-        }
-        
-        #next {
-            left:100%;
-            top:50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        #prev {
-            left:0%;
-            top:50%;
-            transform: translate(-50%, -50%);
-        
-        }
-        
-        button:hover {
-            cursor:pointer;
-        }
-        
-        .slider-wrapper{
-            max-width: 100%;
-            margin:auto;
-        }
-        
-        .awo-reviews-track {
-            position: relative;
-            width: 100%;
-            height:100%;
-            overflow: hidden;
-        }
-          
-        .awo-reviews-slider {
-            width:550px;
-            max-width:100%;
-            height:340px;
-            margin:auto;
-            position: relative;
-            max-width: 100%;
-            background:#f5f5f5;
-            border-radius:10px;
-            border:none;
-            background-color: #0C57B1;
-        }
-        
-          .current {
-            display: block;
-          }
-        
-          .awo-review-slide {
-            height:100%;
-            position: absolute;
-            opacity: 0;
-            transition: opacity 1s, transform 1s;
-            transform: translateX(100%);
-            color:white;
-            text-align: center;
-            padding:0 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-          }
-        
-          .awo-review-slide h3 {
-              font-weight: 500;
-              color: #EAF3FF;
-          }
-        
-          .awo-review-slide p:nth-of-type(2) {
-              color:#A9D0FF;
-          }
-        
-          .awo-review-slide p {
-              margin:10px
-          }
-        
-          
-          .awo-review-slide.current {
-            opacity: 1;
-            transform: translateX(0%);
-          }
-        
-          .awo-review {
-              background-color: #e5f1ff;
-              padding:20px;
-              border-radius: 4px;;
-              display: flex;
-              flex-direction: column;
-              width: 460px;
-              height: 200px;
-          }
-        
-        .delivery-check {
-            display: block;
-            background-color: grey;
-            max-width: 100%;
-            color:#fff;
-            padding:20px;
-            border-radius: 6px;
-            margin-top:20px;
-            display: none;
-          }
-        
-          #awo-delivery-map {
-              border-radius: 6px;
-              padding:12px 22px;
-              min-height: auto;
-              min-width: auto;
-              margin-top: 20px;
-              font-weight: 400;
-              font-size: 14px;
-              background-color:#fff;
-              border:1px solid #a1a4a8;
-              color:#0D2E56;
-              display: block;
-              width:140px
-          }
-        
-        .delivery-success {
-            background-color: #00733C;
-            display: block;
-        }
-        
-        .delivery-failure {
-            background-color: grey;
-            display: block;
-        }
-        
-          /* Media queries */
-        
-          @media (max-width:1000px){
-            .col-sm-100 {
-                width:100%;
-            }
-            .awo-hero-header h1 {
-                font-size: 40px;
-                line-height: 40px;
-               margin-bottom:30px;
-            }
-            .awo-brands-grid {
-                display: flex;
-                overflow:auto;
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                gap:20px;
-                overflow:auto;
-            }
-            .awo-hero-header {
-                text-align: left;
-            }
-            .awo-promotion-wrapper {
-                width:100%;
-                justify-content: flex-start;
-                margin-top: 30px;
-                padding-bottom: 20px;
-            }
-            .awo-home-cat-container, .awo-promotion-wrapper{
-                mask-image: linear-gradient(to right,transparent,black 0px,black 95%,transparent);
-                -webkit-mask-image: linear-gradient(to right,transparent,black 0px,black 95%,transparent);
-            }
-            .awo-hero-cat-button {
-                min-width:130px;
-                min-height:130px;
-                background: #0D2E56;
-                font-size: 16px;
-            }
-            .awo-hero-cat-button:last-child{
-                margin-right: 60px;
-            }
-            .awo-promotion-card:last-child {
-                margin-right: 60px;
-            }
-            .awo-hero-cat-button img {
-                width:130px;
-                margin-top: -50px;
-            }
-            #delivery-section {
-                background-image:none;
-            }
-            .awo-brands-grid {
-                margin-top:40px;
-                padding-bottom: 20px;
-            }
-            .awo-home-section {
-                padding:30px 20px;
-            }
-            #hero {
-                padding:40px 20px;
-            }
-            .slider-wrapper {
-                margin:inherit;
-            }
-            .awo-reviews-slider {
-                width: 100%;
-                margin:auto;
-            }
-            .awo-review {
-                display: none;
-            }
-        }
-        
-        
-        </style>
-        <section class="awo-home-section awo-hero" id="hero">
-          <div class="col-lg-100 col-sm-100 awo-hero-header">
-            <a href="https://uk.trustpilot.com/review/applianceworldonline.com" title="Trustpilot"><img
-              style="width: 200px; margin-bottom: 5px"
-              src="https://res.cloudinary.com/db2okldfm/image/upload/v1673286727/AWO/AWO%20home%20page/Trustpilot_logo_drprpv.png"
-              alt="Trustpilot logo"
-            /> </a>
-            <p style="margin-top: 0px;margin-bottom: -5px;">
-              Rated excellent by over 3000 customers
-            </p>
-            <h1 class="awo-h1">Find your new appliance</h1>
-            <div class="col-lg-100 awo-home-cat-container">
-              <div class="awo-hero-cat-button" data-modal="Dishwashers">
-                <img
-                  data-modal="Dishwashers"
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673280550/AWO/AWO%20home%20page/sgv4hcx40g-removebg-preview_1_1_v0swxk.png"
-                  alt="dishwashers"
-                />
-                Dishwashers
-              </div>
-              <div class="awo-hero-cat-button" data-modal="Fridge-freezers">
-                <img
-                  style="margin-top: -30px;"
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673281206/AWO/AWO%20home%20page/open_fridge_w_items_2_rj5axn.png"
-                  alt="Bosch fridge freezer"
-                  data-modal="Fridge-freezers"
-                />Fridges &amp; <br />
-                freezers
-              </div>
-              <div class="awo-hero-cat-button" data-modal="Dryers">
-                <img
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673284767/AWO/AWO%20home%20page/7950256_R_Z001A_1-removebg-preview_1_ox8f8u.png"
-                  alt="Bosch dryer"
-                  data-modal="Dryers"
-                />Dryers
-              </div>
-              <div class="awo-hero-cat-button" data-modal="Hobs">
-                <img
-                  alt="bosch hob"
-                  data-modal="Hobs"
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673285020/AWO/AWO%20home%20page/pps9a6b90_1_wwt3cp.png"
-                />Hobs
-              </div>
-              <div class="awo-hero-cat-button" data-modal="Ovens">
-                <img
-                  alt="Neff oven"
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673285274/AWO/AWO%20home%20page/b6ccg7an0b_1-removebg-preview_1_o0juk7.png"
-                  data-modal="Ovens"
-                />Ovens
-              </div>
-              <div class="awo-hero-cat-button" data-modal="Washers">
-                <img
-                  alt="washers" style="margin-top:-30px;"
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673286160/AWO/AWO%20home%20page/wgg244argb-removebg-preview_1_hv7lsw.png"
-                  data-modal="Washers"
-                />Washing Machines
-              </div>
-              <div class="awo-hero-cat-button" data-modal="Cooker-hoods">
-                <img
-                  data-modal="Cooker-hoods"
-                  alt="cooker hoods"
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673286228/AWO/AWO%20home%20page/444410244-removebg-preview_1_mdvffh.png"
-                />Hoods
-              </div>
-              <div class="awo-hero-cat-button" data-modal="Other-appliances">
-                <img
-                  data-modal="Other-appliances"
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673286324/AWO/AWO%20home%20page/awc300bl-removebg-preview_1_x2jlax.png"
-                  alt="Amica wine cooler"
-                />Other
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="awo-home-section" id="promos">
-          <div class="col-lg-50 col-sm-100">
-            <p style="color: #094fa4; margin-bottom: -5px">
-              Unbeatable savings
-            </p>
-            <h2 class="awo-h2">Discount codes</h2>
-            <p>
-              Take advantage of our discount codes which are on top of our already low prices. Plus we offer free
-              delivery on orders over £200.
-            </p>
-            <a
-              class="awo-home-button"
-              href="https://www.applianceworldonline.com/promotions"
-              >View all promotions</a
-            >
-          </div>
-          <div class="awo-promotion-wrapper">
-            <div class="awo-promotion-card">
-              <a
-                href="https://www.applianceworldonline.com/brand/aeg?_=1669370248199&product_list_order=price&stockavailability=6660%2C6661"
-                title="aeg promo"
-                ><img
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673293485/AWO/AWO%20home%20page/AEG_discount_card_h77fim.png"
-                  alt="AEG 10% off discount code. Use code JAN10"
-              /></a>
-            </div>
-            <div class="awo-promotion-card">
-              <a
-                href="https://www.applianceworldonline.com/brand/neff?_=1670232631165&stockavailability=6660%2C6661"
-                title="Neff promo"
-              >
-                <img
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673356862/AWO/AWO%20home%20page/Neff_discount_card_fwh7kd.png"
-                  alt="Neff 5% off discount code. Use code JAN5"
-              /></a>
-            </div>
-            <div class="awo-promotion-card">
-              <a
-                href="https://www.applianceworldonline.com/brand/bosch?_=1670232508448&product_list_order=position&stockavailability=6660%2C6661"
-                title="bosch promo"
-                ><img
-                  src="https://res.cloudinary.com/db2okldfm/image/upload/v1673356863/AWO/AWO%20home%20page/Bosch_discount_card_ptfvx9.png"
-                  alt="Bosch 5% off discount code. Use code JAN10"
-              /></a>
-            </div>
-          </div>
-        </section>
-        
-        <section class="awo-home-section" id="delivery-section" style="position:relative;">
-        <div class="awo-hero-modal" id="delivery-map">
-          <div class="modal-content">
-            <h3>Delivery</h3>
-            <img alt="delivery map" src="https://res.cloudinary.com/db2okldfm/image/upload/v1673514183/AWO/AWO%20home%20page/map-1593611409_1_-page-001_ypchzd.jpg" style="max-width:100%;">
-            <a class="close-modal">Close</a>
-          </div>
+  <style>
+    body {
+      margin:0px;
+      font-family:inter;
+    }
+
+    .col-lg-100 {
+      width: 100%;
+    }
+
+    .col-lg-50 {
+      width: 50%;
+    }
+
+    .col-lg-60 {
+      width: 60%;
+    }
+
+    .col-lg-40 {
+      width: 40%;
+    }
+
+    .awo-home-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 60px 40px;
+      background-color: #EEF5FF;
+      border: 1px solid #ededed;
+      color: #0D2E56;
+      max-width: 1200px;
+      margin: 10px auto;
+    }
+
+    .awo-home-section>div>p {
+      line-height: 24px;
+      margin-top: 5px;
+    }
+
+    .awo-hero {
+      position: relative;
+      margin: auto;
+      border-radius: 0px;
+      width:100%;
+      max-width: 100%;
+      padding:0px;
+    }
+
+    .awo-hero-header {
+      text-align: center;
+      color: #0D2E56;
+      max-width: 1200px;
+      margin:auto;
+      padding:40px 40px;
+    }
+
+    .awo-hero-header h1 {
+      font-family: Rubik, Inter, sans-serif;
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 50px;
+      margin-top: 10px;
+    }
+
+    .awo-h2 {
+      font-size: 30px !important;
+      color: #0D2E56 !important;
+      text-align: left !important;
+      font-family: Rubik, Inter, sans-serif;
+      font-weight: 600;
+      margin-top: 10px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+
+    .awo-hero-modal {
+      display: none;
+    }
+
+    .modal-content {
+      background-color: white;
+      color: #0D2E56;
+      border-radius: 6px;
+      padding: 20px;
+      display: none;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: auto;
+      width: 500px;
+      max-width: 80%;
+      text-align: center;
+    }
+
+    .modal-content>ul {
+      padding-inline-start: 0px;
+    }
+
+    .modal-content>ul>li {
+      list-style-type: none;
+      margin-block-start: 0px;
+      border-radius: 4px;
+      border: 1px solid #ededed;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: 0.5s;
+    }
+
+    .modal-content>ul>li>a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      padding: 12px;
+    }
+
+    .modal-content>ul>li:hover {
+      background-color: #0D2E56;
+      color: white;
+      cursor: pointer;
+    }
+
+    .show-modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      left: 0;
+      z-index: 1;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .awo-promotion-wrapper {
+      width: 50%;
+      display: flex;
+      overflow: auto;
+      gap: 20px;
+      justify-content: flex-end;
+    }
+
+    .awo-promotion-card {
+      min-width: 160px;
+    }
+
+    .awo-promotion-card img {
+      width: 160px;
+    }
+
+    /* Delivery section */
+
+    #delivery-section {
+      background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1673339159/AWO/AWO%20home%20page/UK_map_grey_ujkmqp.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 40%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+
+    .awo-postcode-search {
+      padding: 10px 0px;
+    }
+
+
+    #delivery-check-form>label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-family: Inter;
+      display: block;
+    }
+
+    .awo-home-input {
+      font-family: inherit;
+      font-size: 16px;
+      padding: 10.4px 10px;
+      border: 1px solid lightgray;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .delivery-check {
+      display: block;
+      background-color: grey;
+      max-width: 100%;
+      color: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    #awo-delivery-map {
+      border-radius: 6px;
+      padding: 12px 22px;
+      min-height: auto;
+      min-width: auto;
+      font-weight: 400;
+      font-size: 14px;
+      margin-left:0px;
+      background-color: #fff;
+      border: 1px solid #0D2E56;
+      color: #0D2E56;
+      display: block;
+      max-width: 224px
+    }
+
+    .delivery-success {
+      background-color: #00733C;
+      display: block;
+    }
+
+    .delivery-failure {
+      background-color: grey;
+      display: block;
+    }
+
+
+    .awo-brands-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 15px;
+      align-items: center;
+      max-height: 300px;
+      align-self: center;
+    }
+
+
+    .awo-brand {
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 130px;
+      border: 1px solid transparent;
+      transition: 0.5s;
+    }
+
+    .awo-brand:hover {
+      border: 1px solid #0C57B1;
+      background: #f5f5f5;
+    }
+
+    .awo-promotion-card:hover {
+      opacity: 0.7;
+    }
+
+    .awo-brands-img {
+      min-width: 90px;
+      aspect-ratio: 3/2;
+      object-fit: contain;
+      max-width: 100%;
+    }
+
+    /* Trustpilot section */
+
+    /* .awo-trustpilot {
+        background-color: #094FA4;
+        color: #fff;
+        border-radius: 6px;
+        margin-bottom: 50px;
+    } */
+
+    /* .awo-trustpilot > div > .awo-h2 {
+        color:white!important;
+    } */
+
+    .awo-trustpilot>div>.awo-home-button {
+      margin-bottom: 10px;
+    }
+
+
+    .awo-home-cat-container {
+      display: flex;
+      width: 100%;
+      overflow: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+
+    .awo-hero-cat-button {
+      min-width: 140px;
+      min-height: 180px;
+      font-size: 16px;
+      text-align: center;
+      margin:auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      color: #0d2e56;
+      background-color: #fff;
+      font-family: Rubik;
+      font-weight: 500;
+      padding:0px 5px;
+    }
+    .awo-hero-cat-button:nth-of-type(even) {
+      background-color: #FAFAFA;
+    }
+
+    .awo-hero-cat-button:hover {
+      cursor: pointer;
+    }
+
+    .awo-hero-cat-button img {
+      width: 120px;
+      aspect-ratio: 3/2;
+      max-width: 100%;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .awo-home-button,
+    .close-modal,
+    #postcode-search {
+      border-radius: 4px;
+      border: 1px solid transparent;
+      background-color: #0D2E56;
+      color: #f5f5f5 !important;
+      font-family: Inherit;
+      padding: 12px 22px;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+      transition: 0.5s;
+      line-height: 16px;
+      height: auto;
+    }
+
+
+    .awo-home-button a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .awo-home-button:hover,
+    .close-modal:hover {
+      background-color: #094FA4;
+    }
+
+
+
+    /* Slider styles */
+
+    .awo-slider-toggle {
+      border: 1px solid #ededed;
+      border-radius: 50px;
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      background-color: #0C57B1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    .awo-slider-toggle:hover {
+      background-color: white;
+      color: #0C57B1;
+    }
+
+    #next {
+      left: 100%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #prev {
+      left: 0%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    .slider-wrapper {
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .awo-reviews-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .awo-reviews-slider {
+      width: 550px;
+      max-width: 100%;
+      height: 340px;
+      margin: auto;
+      position: relative;
+      max-width: 100%;
+      background: #f5f5f5;
+      border-radius: 10px;
+      border: none;
+      background-color: #0C57B1;
+    }
+
+    .current {
+      display: block;
+    }
+
+    .awo-review-slide {
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s, transform 1s;
+      transform: translateX(100%);
+      color: white;
+      text-align: center;
+      padding: 0 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .awo-review-slide h3 {
+      font-weight: 500;
+      color: #EAF3FF;
+    }
+
+    .awo-review-slide p:nth-of-type(2) {
+      color: #A9D0FF;
+    }
+
+    .awo-review-slide p {
+      margin: 10px
+    }
+
+
+    .awo-review-slide.current {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+
+    .awo-review {
+      background-color: #e5f1ff;
+      padding: 20px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      width: 460px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+    }
+
+
+    .offer-banner {
+      background-color: #0D2E56;
+      color:white;
+      padding:12px 0px;
+      min-width:100%;
+    }
+
+    .offer-content {
+      max-width: 1200px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      padding:0px;
+      min-height: auto;
+      max-width: auto;
+    background: inherit;
+    color: white;
+    }
+
+    .offer-content p {
+      margin:0;
+      text-align: center;
+    }
+
+
+    /* Media queries */
+
+    @media (max-width:1000px) {
+      .col-sm-100 {
+        width: 100%;
+      }
+
+      .awo-hero-header h1 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 30px;
+      }
+
+      .awo-brands-grid {
+        display: flex;
+        overflow: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow: auto;
+      }
+
+      .awo-hero-header {
+        text-align: left;
+      }
+
+      .awo-promotion-wrapper {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 30px;
+        padding-bottom: 20px;
+      }
+
+      .awo-home-cat-container,
+      .awo-promotion-wrapper {
+        mask-image: linear-gradient(to right, transparent, black 0px, black 95%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 0px, black 95%, transparent);
+      }
+
+      /* .awo-hero-cat-button {
+        min-width: 130px;
+        min-height: 130px;
+        background: #0D2E56;
+        font-size: 16px;
+      } */
+
+      .awo-promotion-card:last-child {
+        margin-right: 60px;
+      }
+
+      #delivery-section {
+        background-image: none;
+      }
+
+      .awo-brands-grid {
+        margin-top: 40px;
+        padding-bottom: 20px;
+      }
+
+      .awo-home-section {
+        padding:30px 20px;
+      }
+      .awo-hero-header {
+        padding: 30px 10px;
+      }
+
+      #hero {
+        padding: 40px 20px;
+      }
+
+      .slider-wrapper {
+        margin: inherit;
+      }
+
+      .awo-reviews-slider {
+        width: 100%;
+        margin: auto;
+      }
+
+      .awo-review {
+        display: none;
+      }
+      .offer-content {
+        font-size: 12px;
+        padding:10px 4px;
+      }
+      .offer-content > p > img {
+        width:24px!important;
+        margin: 4px auto!important;
+        display: block;
+      }
+    }
+  </style>
+  <div class="offer-banner" >
+    <div class="offer-content awo-hero-cat-button" data-modal="payin3">
+      <img data-modal="payin3" alt="paypal" src="https://res.cloudinary.com/db2okldfm/image/upload/v1676051062/AWO/AWO%20home%20page/mingcute_paypal-fill_ydzglo.png" style="width:24px;margin-right:20px;margin-bottom:5px;">
+      <span data-modal="payin3">Spread the cost over 3 interest free payments with PayPal</span>
+    </div>
+  </div>
+  <section class="awo-home-section awo-hero" id="hero">
+    <div class="col-lg-100 col-sm-100 awo-hero-header">
+      <a href="https://uk.trustpilot.com/review/applianceworldonline.com" title="Trustpilot"><img
+          style="width: 200px; margin-bottom: 5px"
+          src="https://res.cloudinary.com/db2okldfm/image/upload/v1676050527/AWO/AWO%20home%20page/Trustpilot_dark_1_biiym3.png"
+          alt="Trustpilot logo" /> </a>
+      <p style="margin-top: 0px;margin-bottom: -5px; font-family: Rubik;">
+        Rated excellent by over 3400 customers
+      </p>
+      <h1 class="awo-h1">Find your new appliance</h1>
+      <div class="col-lg-100 awo-home-cat-container">
+        <div class="awo-hero-cat-button" data-modal="Dishwashers">
+          <img data-modal="Dishwashers"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673280550/AWO/AWO%20home%20page/sgv4hcx40g-removebg-preview_1_1_v0swxk.png"
+            alt="dishwashers" />
+          Dishwashers
         </div>
-        <div class="awo-delivery col-lg-50 col-sm-100">
-          <p style="color: #094fa4; margin-bottom: -5px">
-            Supplying appliances for 52 years
-          </p>
-          <h2 class="awo-h2">Online, in-store or over the phone</h2>
-          <p>
-            We are a Manchester based, family owned business, that offers free
-            delivery to most post-codes in the UK. Connect to real people and
-            get expert advice quickly by calling <strong>0161 794 3030</strong>. You can also open
-             a live chat or visit one of our two showrooms based in
-            <a href="https://www.applianceworldonline.com/showroom-opening" title="Swinton">Swinton</a> and <a href="https://www.applianceworldonline.com/showroom-opening" title="Urmston">Urmston</a>.
-          </p>
-          <div class="awo-postcode-search">
-            <form style="position: relative" id="delivery-check-form">
-              <label>Enter your post-code to check delivery</label>
-            <input text="text" class="awo-home-input" id="awo-postcode-input">
-            <button id="postcode-search" class="awo-home-button">Search</button>
-            <div class="delivery-check"></div>
-            </form>
-            <div id="awo-delivery-map" data-modal="delivery-map" class="awo-hero-cat-button">Open delivery map
-            </div>
-          </div>
+        <div class="awo-hero-cat-button" data-modal="Fridge-freezers">
+          <img
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673281206/AWO/AWO%20home%20page/open_fridge_w_items_2_rj5axn.png"
+            alt="Bosch fridge freezer" data-modal="Fridge-freezers" />Refrigeration
         </div>
-        <div class="awo-brands-grid col-lg-50 col-sm-100">
+        <div class="awo-hero-cat-button" data-modal="Dryers">
+          <img
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673284767/AWO/AWO%20home%20page/7950256_R_Z001A_1-removebg-preview_1_ox8f8u.png"
+            alt="Bosch dryer" data-modal="Dryers" />Dryers
+        </div>
+        <div class="awo-hero-cat-button" data-modal="Hobs">
+          <img alt="bosch hob" data-modal="Hobs"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1676049841/AWO/AWO%20home%20page/Hob_with_margin_1_iaj1li.png" />Hobs
+        </div>
+        <div class="awo-hero-cat-button" data-modal="Ovens">
+          <img alt="Neff oven"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1676049586/AWO/AWO%20home%20page/CG92X9_SS_smeg_rangecooker_01_csnf9z.webp"
+            data-modal="Ovens" />Cooking
+        </div>
+        <div class="awo-hero-cat-button" data-modal="Washers">
+          <img alt="washers"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673286160/AWO/AWO%20home%20page/wgg244argb-removebg-preview_1_hv7lsw.png"
+            data-modal="Washers" />Washing Machines
+        </div>
+        <div class="awo-hero-cat-button" data-modal="Cooker-hoods">
+          <img data-modal="Cooker-hoods" alt="cooker hoods"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673286228/AWO/AWO%20home%20page/444410244-removebg-preview_1_mdvffh.png" />Hoods
+        </div>
+        <div class="awo-hero-cat-button" data-modal="Other-appliances">
+          <img data-modal="Other-appliances"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673286324/AWO/AWO%20home%20page/awc300bl-removebg-preview_1_x2jlax.png"
+            alt="Amica wine cooler" />Other
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="awo-home-section" id="delivery-section" style="position:relative;">
+    <div class="awo-hero-modal" id="delivery-map">
+      <div class="modal-content">
+        <h3>Delivery</h3>
+        <img loading="lazy" alt="delivery map"
+          src="https://res.cloudinary.com/db2okldfm/image/upload/v1673514183/AWO/AWO%20home%20page/map-1593611409_1_-page-001_ypchzd.jpg"
+          style="max-width:100%;">
+        <a class="close-modal">Close</a>
+      </div>
+    </div>
+    <div class="awo-delivery col-lg-50 col-sm-100">
+      <p style="color: #094fa4; margin-bottom: -5px">
+        Supplying appliances for 52 years
+      </p>
+      <h2 class="awo-h2">Online, in-store or over the phone</h2>
+      <p>
+        We are a Manchester based, family owned business, that offers free
+        delivery to most post-codes in the UK. Connect to real people and
+        get expert advice quickly by calling <strong>0161 794 3030</strong>. You can also open
+        a live chat or visit one of our two showrooms based in
+        <a href="https://www.applianceworldonline.com/showroom-opening" title="Swinton">Swinton</a> and <a
+          href="https://www.applianceworldonline.com/showroom-opening" title="Urmston">Urmston</a>.
+      </p>
+      <div class="awo-postcode-search">
+        <form style="position: relative;" id="delivery-check-form">
+          <label>Enter your post-code to check delivery</label>
+          <input text="text" class="awo-home-input" id="awo-postcode-input">
+          <button id="postcode-search" class="awo-home-button">Search</button>
+          <div class="delivery-check"></div>
+        </form>
+        <div id="awo-delivery-map" data-modal="delivery-map" class="awo-hero-cat-button">Open delivery map
+        </div>
+      </div>
+    </div>
+    <div class="awo-brands-grid col-lg-50 col-sm-100">
+      <a
+        href="https://www.applianceworldonline.com/brand/bosch?_=1670232508448&product_list_order=position&stockavailability=6660%2C6661">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343729/AWO/AWO%20home%20page/Bosch_logo_zqpflt.png"
+            alt="Bosch" />
+        </div>
+      </a>
+      <a href="https://www.applianceworldonline.com/brand/indesit?_=1670236060160&stockavailability=6660%2C6661">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343725/AWO/AWO%20home%20page/indesit_logo_tomdbb.png"
+            alt="indesit_logo_tomdbb" />
+        </div>
+      </a>
+      <a
+        href="https://www.applianceworldonline.com/brand/aeg?_=1669370248199&product_list_order=price&stockavailability=6660%2C6661">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673358082/AWO/AWO%20home%20page/AEG_logo_1_rouanp.png"
+            alt="AEG logo" />
+        </div>
+      </a>
+      <a href="https://www.applianceworldonline.com/brand/neff?_=1670232631165&stockavailability=6660%2C6661">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343727/AWO/AWO%20home%20page/Neff_logo_mwxbuy.png"
+            alt="Neff logo" />
+        </div>
+      </a>
+      <a href="https://www.applianceworldonline.com/brand/liebherr?_=1670232788121&stockavailability=6660%2C6661">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343728/AWO/AWO%20home%20page/Liebherr_logo_ypjym2.png"
+            alt="Liebherr" />
+        </div>
+      </a>
+      <a href="https://www.applianceworldonline.com/brand/samsung?_=1670232837191&stockavailability=6660%2C6661">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343720/AWO/AWO%20home%20page/Samsung_logo_gnyj40.png"
+            alt="Samsung" />
+        </div>
+      </a>
+      <a href="https://www.applianceworldonline.com/brand/smeg?_=1670232709560&stockavailability=6660%2C6661">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673357895/AWO/AWO%20home%20page/Smeg_logo_annloi.png"
+            alt="Smeg" />
+        </div>
+      </a>
+      <a href="https://www.applianceworldonline.com/brand/hotpoint?_=1670232980487&stockavailability=6660%2C6661">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673357897/AWO/AWO%20home%20page/Hotpoint_logo_black_uqum1a.png"
+            alt="Hotpoint" />
+        </div>
+      </a>
+      <a href="https://www.applianceworldonline.com/brand/beko?product_list_dir=desc">
+        <div class="awo-brand">
+          <img class="awo-brands-img" loading="lazy"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673358160/AWO/AWO%20home%20page/Beko_logo_pgcat5.png"
+            alt="Beko" />
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="awo-trustpilot awo-home-section">
+    <div class="col-lg-50 col-sm-100">
+      <a href="https://uk.trustpilot.com/review/applianceworldonline.com" title="trustpilot"><img
+          style="width: 200px; margin-bottom: 5px" loading="lazy"
+          src="https://res.cloudinary.com/db2okldfm/image/upload/v1673293101/AWO/AWO%20home%20page/Trustpilot_logo_1_ytekvc.png"
+          alt="Trustpilot logo" /></a>
+      <h2 class="awo-h2">Exceptional service</h2>
+      <p>
+        Appliance World are the highest reviewed Appliance store in
+        Manchester as verified by Trustpilot. Customers quote our friendly
+        staff, low prices and prompt delivery service as reasons we deserve
+        5 stars.
+      </p>
+      <a href="https://applianceworldonline.com/reviews" style="margin-top: 10px" class="awo-home-button">See all
+        reviews</a>
+    </div>
+    <div class="col-lg-50 col-sm-100" style="display: flex; justify-content: flex-end;align-items: center;">
+      <div class="awo-review">
+        <img
+          src="https://res.cloudinary.com/db2okldfm/image/upload/v1673438962/AWO/AWO%20home%20page/TP_stars_oaq6po.png"
+          style="display: block; width:120px;margin-bottom: 10px;" alt="trustpilot">
+        <p>“No problems. Quick delivery. Appliances and packaging all in good working order. Ordered 29 December,
+          delivered 3rd January on time as promised.”</p>
+        <p>by Frank Lutwyche</p>
+      </div>
+    </div>
+  </section>
+  <div class="awo-hero-modal" id="Dishwashers">
+    <div class="modal-content">
+      <h3>Dishwashers</h3>
+      <ul>
+        <li>
+          <a href="https://www.applianceworldonline.com/dishwashers">All dishwashers</a>
+        </li>
+        <li>
           <a
-            href="https://www.applianceworldonline.com/brand/bosch?_=1670232508448&product_list_order=position&stockavailability=6660%2C6661"
-            ><div class="awo-brand">
-              <img
-                class="awo-brands-img"
-                loading="lazy"
-                src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343729/AWO/AWO%20home%20page/Bosch_logo_zqpflt.png"
-                alt="Bosch"
-              /></div
-          ></a>
+            href="https://www.applianceworldonline.com/dishwashers/60cm-dishwashers?_=1668677206862&product_list_order=price&stockavailability=6660%2C6661">60CM
+            dishwashers</a>
+        </li>
+        <li>
           <a
-            href="https://www.applianceworldonline.com/brand/indesit?_=1670236060160&stockavailability=6660%2C6661"
-            ><div class="awo-brand">
-              <img
-                class="awo-brands-img"
-                loading="lazy"
-                src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343725/AWO/AWO%20home%20page/indesit_logo_tomdbb.png"
-                alt="indesit_logo_tomdbb"
-              /></div
-          ></a>
+            href="https://www.applianceworldonline.com/dishwashers/60cm-dishwashers/fully-integrated-60cm-dishwashers?_=1673604326214&product_list_order=price&stockavailability=6660%2C6661">Integrated
+            60CM dishwashers</a>
+        </li>
+        <li>
           <a
-            href="https://www.applianceworldonline.com/brand/aeg?_=1669370248199&product_list_order=price&stockavailability=6660%2C6661"
-          >
-            <div class="awo-brand">
-              <img
-                class="awo-brands-img"
-                loading="lazy"
-                src="https://res.cloudinary.com/db2okldfm/image/upload/v1673358082/AWO/AWO%20home%20page/AEG_logo_1_rouanp.png"
-                alt="AEG logo"
-              /></div
-          ></a>
+            href="https://www.applianceworldonline.com/dishwashers/45cm-dishwashers?_=1668677249899&product_list_order=price&stockavailability=6660%2C6661">45CM
+            dishwashers</a>
+        </li>
+        <li>
           <a
-            href="https://www.applianceworldonline.com/brand/neff?_=1670232631165&stockavailability=6660%2C6661"
-          >
-            <div class="awo-brand">
-              <img
-                class="awo-brands-img"
-                loading="lazy"
-                src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343727/AWO/AWO%20home%20page/Neff_logo_mwxbuy.png"
-                alt="Neff logo"
-              /></div
-          ></a>
-         <a href="https://www.applianceworldonline.com/brand/liebherr?_=1670232788121&stockavailability=6660%2C6661"> <div class="awo-brand">
-            <img
-              class="awo-brands-img"
-              loading="lazy"
-              src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343728/AWO/AWO%20home%20page/Liebherr_logo_ypjym2.png"
-              alt="Liebherr"
-            />
-          </div>
-          </a>
-          <a href="https://www.applianceworldonline.com/brand/samsung?_=1670232837191&stockavailability=6660%2C6661">
-          <div class="awo-brand">
-            <img
-              class="awo-brands-img"
-              loading="lazy"
-              src="https://res.cloudinary.com/db2okldfm/image/upload/v1673343720/AWO/AWO%20home%20page/Samsung_logo_gnyj40.png"
-              alt="Samsung"
-            />
-          </div>
-        </a>
-        <a href="https://www.applianceworldonline.com/brand/smeg?_=1670232709560&stockavailability=6660%2C6661">
-          <div class="awo-brand">
-            <img
-              class="awo-brands-img"
-              loading="lazy"
-              src="https://res.cloudinary.com/db2okldfm/image/upload/v1673357895/AWO/AWO%20home%20page/Smeg_logo_annloi.png"
-              alt="Smeg"
-            />
-          </div>
-        </a>
-        <a href="https://www.applianceworldonline.com/brand/hotpoint?_=1670232980487&stockavailability=6660%2C6661">
-          <div class="awo-brand">
-            <img
-              class="awo-brands-img"
-              loading="lazy"
-              src="https://res.cloudinary.com/db2okldfm/image/upload/v1673357897/AWO/AWO%20home%20page/Hotpoint_logo_black_uqum1a.png"
-              alt="Hotpoint"
-            />
-          </div>
-        </a>
-        <a href="https://www.applianceworldonline.com/brand/beko?product_list_dir=desc">
-          <div class="awo-brand">
-            <img
-              class="awo-brands-img"
-              loading="lazy"
-              src="https://res.cloudinary.com/db2okldfm/image/upload/v1673358160/AWO/AWO%20home%20page/Beko_logo_pgcat5.png"
-              alt="Beko"
-            />
-          </div>
-        </a>
-        </div>
-        </section>
-        <section class="awo-trustpilot awo-home-section">
-        <div class="col-lg-50 col-sm-100">
-          <a href="https://uk.trustpilot.com/review/applianceworldonline.com" title="trustpilot"><img
-            style="width: 200px; margin-bottom: 5px"
-            src="https://res.cloudinary.com/db2okldfm/image/upload/v1673293101/AWO/AWO%20home%20page/Trustpilot_logo_1_ytekvc.png"
-            alt="Trustpilot logo"
-          /></a>
-          <h2 class="awo-h2">Exceptional service</h2>
-          <p>
-            Appliance World are the highest reviewed Appliance store in
-            Manchester as verified by Trustpilot. Customers quote our friendly
-            staff, low prices and prompt delivery service as reasons we deserve
-            5 stars.
-          </p>
+            href="https://www.applianceworldonline.com/dishwashers/45cm-dishwashers/fully-integrated-45cm-dishwasers?product_list_dir=desc">Integrated
+            45CM dishwashers</a>
+        </li>
+      </ul>
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <div class="awo-hero-modal" id="Fridge-freezers">
+    <div class="modal-content">
+      <h3>Fridges and freezers</h3>
+      <ul>
+        <li>
           <a
-            href="https://applianceworldonline.com/reviews"
-            style="margin-top: 10px"
-            class="awo-home-button"
-            >See all reviews</a
-          >
-        </div>
-        <div class="col-lg-50 col-sm-100" style="display: flex; justify-content: flex-end;align-items: center;">
-         <div class="awo-review">
-          <img src="https://res.cloudinary.com/db2okldfm/image/upload/v1673438962/AWO/AWO%20home%20page/TP_stars_oaq6po.png" style="display: block; width:120px;margin-bottom: 10px;" alt="trustpilot"> 
-           <p>“No problems. Quick delivery. Appliances and packaging all in good working order. Ordered 29 December, delivered 3rd January on time as promised.”</p>
-           <p>by Frank Lutwyche</p>
-         </div>
-        </div>
-        </section>
-        <div class="awo-hero-modal" id="Dishwashers">
-        <div class="modal-content">
-          <h3>Dishwashers</h3>
-          <ul>
-            <li>
-              <a href="https://www.applianceworldonline.com/dishwashers"
-                >All dishwashers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/dishwashers/60cm-dishwashers?_=1668677206862&product_list_order=price&stockavailability=6660%2C6661"
-                >60CM dishwashers</a
-              >
-            </li>
-           <li>
-              <a
-                href="https://www.applianceworldonline.com/dishwashers/60cm-dishwashers/fully-integrated-60cm-dishwashers?_=1673604326214&product_list_order=price&stockavailability=6660%2C6661"
-                >Integrated 60CM dishwashers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/dishwashers/45cm-dishwashers?_=1668677249899&product_list_order=price&stockavailability=6660%2C6661"
-                >45CM dishwashers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/dishwashers/45cm-dishwashers/fully-integrated-45cm-dishwasers?product_list_dir=desc"
-                >Integrated 45CM dishwashers</a
-              >
-            </li>
-          </ul>
-          <a class="close-modal">Close</a>
-        </div>
-        </div>
-        <div class="awo-hero-modal" id="Fridge-freezers">
-        <div class="modal-content">
-          <h3>Fridges and freezers</h3>
-          <ul>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/fridges-and-freezers/fridge-freezers?_=1668678719010&stockavailability=6660%2C6661&product_list_order=price"
-                >All fridge freezers</a
-              > 
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/fridges-and-freezers/fridges?_=1668678718142&stockavailability=6660%2C6661&product_list_order=price"
-                >Fridges</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/fridges-and-freezers/freezers?_=1668678720146&stockavailability=6660%2C6661&product_list_order=price"
-                >Freezers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/fridges-and-freezers/american-fridge-freezers"
-                >American fridge freezers</a
-              >
-            </li>
-          
-          </ul>
-          <a class="close-modal">Close</a>
-        </div>
-        </div>
-        <div class="awo-hero-modal" id="Dryers">
-        <div class="modal-content">
-          <h3>Dryers</h3>
-          <ul>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/tumble-dryers?_=1668677386798&product_list_order=price&stockavailability=6660%2C6661"
-                >Tumble dryers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/tumble-dryers/condenser-tumble-dryers?_=1668677462437&product_list_order=price&stockavailability=6660%2C6661"
-                >Condenser dryers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/tumble-dryers/heat-pump-condenser-dryers?_=1668677608576&product_list_order=price&stockavailability=6660%2C6661"
-                >Heat pump dryers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/tumble-dryers/vented-dryers?_=1668677712293&product_list_order=price&stockavailability=6660%2C6661"
-                >Vented dryers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/integrated/integrated-dryers"
-                >Integrated dryers</a
-              >
-            </li>
-          </ul>
-          <a class="close-modal">Close</a>
-        </div>
-        </div>
-        <div class="awo-hero-modal" id="Hobs">
-        <div class="modal-content">
-          <h3>Hobs</h3>
-          <ul>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/hobs?_=1668680613600&product_list_order=price&stockavailability=6660%2C6661"
-                >All hobs</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/hobs/induction-hobs?_=1668680276977&stockavailability=6660%2C6661&product_list_order=price"
-                >Induction hobs</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/hobs/ceramic-hobs?_=1668680301318&product_list_order=price&stockavailability=6660%2C6661"
-                >Ceramic hobs</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/hobs/gas-hobs?_=1668680329711&stockavailability=6660%2C6661&product_list_order=price"
-                >Gas hobs</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/hobs/venting-hobs?_=1668680353045&stockavailability=6660%2C6661&product_list_order=price"
-                >Venting hobs</a
-              >
-            </li>
-          </ul>
-          <a class="close-modal">Close</a>
-        </div>
-        </div>
-        <div class="awo-hero-modal" id="Ovens">
-        <div class="modal-content">
-          <h3>Ovens</h3>
-          <ul>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/ovens?_=1668677837894&product_list_order=price&stockavailability=6660%2C6661"
-                >All ovens</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/microwaves"
-                >Microwave ovens</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/ovens/built-in-single-electric-ovens?_=1668678042001&stockavailability=6660%2C6661&product_list_order=price"
-                >Built-in single electric ovens</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/ovens/built-in-double-electric-ovens?_=1668680149870&product_list_order=price&stockavailability=6660%2C6661"
-                >Built- in double electric ovens</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/ovens/built-under-double-electric-ovens?_=1668680152867&product_list_order=price&stockavailability=6660%2C6661"
-                >Built-under double electric ovens</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/cookers"
-                >Cookers</a
-              >
-            </li>
-          </ul>
-          <a class="close-modal">Close</a>
-        </div>
-        </div>
-        <div class="awo-hero-modal" id="Washers">
-        <div class="modal-content">
-          <h3>Washing Machines</h3>
-          <ul>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/washing-machines?_=1668677289932&product_list_order=price&stockavailability=6660%2C6661"
-                >All washers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/washing-machines/freestanding-washing-machines?_=1668677290935&product_list_order=price&stockavailability=6660%2C6661"
-                >Freestanding washers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/washer-dryers?_=1668677289932&product_list_order=price&stockavailability=6660%2C6661"
-                >Washer dryers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/washing-machines-and-dryers/integrated/integrated-washing-machines"
-                >Integrated washing machines</a
-              >
-            </li>
-        
-          </ul>
-          <a class="close-modal">Close</a>
-        </div>
-        </div>
-        <div class="awo-hero-modal" id="Cooker-hoods">
-        <div class="modal-content">
-          <h3>Cooker Hoods</h3>
-          <ul>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/hoods?_=1668680428107&stockavailability=6660%2C6661&product_list_order=price"
-                >All hoods</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/hoods/chimney-hoods?_=1668680464629&stockavailability=6660%2C6661&product_list_order=price"
-                >Chimney hoods</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/cooking/hoods/canopy-hoods?_=1668680514939&stockavailability=6660&product_list_order=price"
-                >Canopy hoods</a
-              >
-            </li>
-          </ul>
-          <a class="close-modal">Close</a>
-        </div>
-        </div>
-        <div class="awo-hero-modal" id="Other-appliances">
-        <div class="modal-content">
-          <h3>Other appliances</h3>
-          <ul>
-           <li> <a
-              href="https://www.applianceworldonline.com/cooking/warming-drawers?product_list_dir=desc"
-              >Warming draws</a></li>
-            <li> <a
-              href="https://www.applianceworldonline.com/other-appliances/coffee-machines?_=1668680799803&product_list_dir=desc"
-              >Coffee centres</a></li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/fridges-and-freezers/wine-coolers?_=1668680772904&stockavailability=6660%2C6661&product_list_order=price"
-                >Wine coolers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/tefal-fz727840-400022183"
-                >Air Fryers</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.applianceworldonline.com/sinks-and-taps?_=1668680692872&product_list_order=price&stockavailability=6660%2C6661"
-                >Sinks and taps</a
-              >
-            </li>
-          </ul>
-          <a class="close-modal">Close</a>
-        </div>
-        </div>
-        <script src="/utils.js" type="text/javascript"></script>
+            href="https://www.applianceworldonline.com/fridges-and-freezers/fridge-freezers?_=1668678719010&stockavailability=6660%2C6661&product_list_order=price">All
+            fridge freezers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/fridges-and-freezers/fridge-freezers/integrated-fridge-freezers?_=1673879574283&product_list_order=price&stockavailability=6660%2C6661">Integrated
+            fridge freezers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/fridges-and-freezers/fridges?_=1668678718142&stockavailability=6660%2C6661&product_list_order=price">Fridges</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/fridges-and-freezers/fridges/integrated-fridges?_=1673879578200&product_list_order=price&stockavailability=6660%2C6661">Integrated
+            Fridges</a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/fridges-and-freezers/freezers?_=1668678720146&stockavailability=6660%2C6661&product_list_order=price">Freezers</a>
+        </li>
+        <li>
+          <a href=" https://www.applianceworldonline.com/fridges-and-freezers/freezers/integrated-freezers">Integrated
+            Freezers</a>
+        </li>
+
+        <li>
+          <a href="https://www.applianceworldonline.com/fridges-and-freezers/american-fridge-freezers">American fridge
+            freezers</a>
+        </li>
+
+      </ul>
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <div class="awo-hero-modal" id="Dryers">
+    <div class="modal-content">
+      <h3>Dryers</h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/washing-machines-and-dryers/tumble-dryers?_=1668677386798&product_list_order=price&stockavailability=6660%2C6661">Tumble
+            dryers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/washing-machines-and-dryers/tumble-dryers/condenser-tumble-dryers?_=1668677462437&product_list_order=price&stockavailability=6660%2C6661">Condenser
+            dryers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/washing-machines-and-dryers/tumble-dryers/heat-pump-condenser-dryers?_=1668677608576&product_list_order=price&stockavailability=6660%2C6661">Heat
+            pump dryers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/washing-machines-and-dryers/tumble-dryers/vented-dryers?_=1668677712293&product_list_order=price&stockavailability=6660%2C6661">Vented
+            dryers</a>
+        </li>
+        <li>
+          <a href="https://www.applianceworldonline.com/washing-machines-and-dryers/integrated/integrated-dryers">Integrated
+            dryers</a>
+        </li>
+      </ul>
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <div class="awo-hero-modal" id="Hobs">
+    <div class="modal-content">
+      <h3>Hobs</h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/hobs?_=1668680613600&product_list_order=price&stockavailability=6660%2C6661">All
+            hobs</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/hobs/induction-hobs?_=1668680276977&stockavailability=6660%2C6661&product_list_order=price">Induction
+            hobs</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/hobs/ceramic-hobs?_=1668680301318&product_list_order=price&stockavailability=6660%2C6661">Ceramic
+            hobs</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/hobs/gas-hobs?_=1668680329711&stockavailability=6660%2C6661&product_list_order=price">Gas
+            hobs</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/hobs/venting-hobs?_=1668680353045&stockavailability=6660%2C6661&product_list_order=price">Venting
+            hobs</a>
+        </li>
+      </ul>
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <div class="awo-hero-modal" id="Ovens">
+    <div class="modal-content">
+      <h3>Ovens</h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/ovens?_=1668677837894&product_list_order=price&stockavailability=6660%2C6661">All
+            ovens</a>
+        </li>
+        <li>
+          <a href="https://www.applianceworldonline.com/cooking/microwaves">Microwave ovens</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/ovens/built-in-single-electric-ovens?_=1668678042001&stockavailability=6660%2C6661&product_list_order=price">Built-in
+            single electric ovens</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/ovens/built-in-double-electric-ovens?_=1668680149870&product_list_order=price&stockavailability=6660%2C6661">Built-
+            in double electric ovens</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/ovens/built-under-double-electric-ovens?_=1668680152867&product_list_order=price&stockavailability=6660%2C6661">Built-under
+            double electric ovens</a>
+        </li>
+        <li>
+          <a href="https://www.applianceworldonline.com/cooking/cookers">Cookers</a>
+        </li>
+      </ul>
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <div class="awo-hero-modal" id="Washers">
+    <div class="modal-content">
+      <h3>Washing Machines</h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/washing-machines-and-dryers/washing-machines?_=1668677289932&product_list_order=price&stockavailability=6660%2C6661">All
+            washers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/washing-machines-and-dryers/washing-machines/freestanding-washing-machines?_=1668677290935&product_list_order=price&stockavailability=6660%2C6661">Freestanding
+            washers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/washing-machines-and-dryers/washer-dryers?_=1668677289932&product_list_order=price&stockavailability=6660%2C6661">Washer
+            dryers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/washing-machines-and-dryers/integrated/integrated-washing-machines">Integrated
+            washing machines</a>
+        </li>
+
+      </ul>
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <div class="awo-hero-modal" id="Cooker-hoods">
+    <div class="modal-content">
+      <h3>Cooker Hoods</h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/hoods?_=1668680428107&stockavailability=6660%2C6661&product_list_order=price">All
+            hoods</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/hoods/chimney-hoods?_=1668680464629&stockavailability=6660%2C6661&product_list_order=price">Chimney
+            hoods</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/cooking/hoods/canopy-hoods?_=1668680514939&stockavailability=6660&product_list_order=price">Canopy
+            hoods</a>
+        </li>
+      </ul>
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <div class="awo-hero-modal" id="Other-appliances">
+    <div class="modal-content">
+      <h3>Other appliances</h3>
+      <ul>
+        <li> <a href="https://www.applianceworldonline.com/cooking/warming-drawers?product_list_dir=desc">Warming
+            draws</a></li>
+        <li> <a
+            href="https://www.applianceworldonline.com/other-appliances/coffee-machines?_=1668680799803&product_list_dir=desc">Coffee
+            centres</a></li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/fridges-and-freezers/wine-coolers?_=1668680772904&stockavailability=6660%2C6661&product_list_order=price">Wine
+            coolers</a>
+        </li>
+        <li>
+          <a href="https://www.applianceworldonline.com/tefal-fz727840-400022183">Air Fryers</a>
+        </li>
+        <li>
+          <a
+            href="https://www.applianceworldonline.com/sinks-and-taps?_=1668680692872&product_list_order=price&stockavailability=6660%2C6661">Sinks
+            and taps</a>
+        </li>
+      </ul>
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <div class="awo-hero-modal" id="payin3">
+    <div class="modal-content">
+        <img style="max-width:100%;" src="https://res.cloudinary.com/db2okldfm/image/upload/v1676052133/AWO/AWO%20home%20page/payin3_vu6iad.png" alt="Paypal pay in 3">
+      <a class="close-modal">Close</a>
+    </div>
+  </div>
+  <script src="/utils.js" type="text/javascript"></script>
 </body>
+
 </html>
